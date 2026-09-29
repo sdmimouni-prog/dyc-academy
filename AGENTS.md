@@ -2,6 +2,10 @@
 
 ## DYC user preferences
 
+- All pages use `SiteLayout` with the official shared `Header` and `Footer`. Preserve the Home visually when extending the site. `/academie` follows the supplied 2026-09-29 academy mockup, with existing Home typography, tokens, buttons, hover effects and responsive breakpoints. The official footer invitation supplies the final creation CTA; do not duplicate it.
+
+- “Groupes & Entreprises” is a direct navigation link, without a submenu or dropdown chevron.
+
 - Academy and groups photos zoom very slowly from load and on hover; preserve their frames, signatures and fixed blending gradients.
 
 - Workshop cards lift gently with a warm shadow on hover; their photos visibly zoom 14% over 12 seconds from page load, plus a responsive 6% hover zoom. Respect reduced-motion.

@@ -1,12 +1,13 @@
 import { ChefHat, UsersThree, ForkKnife, Star } from '@phosphor-icons/react';
 import { Arrow } from '../components/Arrow';
-import { Benefits } from '../components/Benefits';
+import { Benefits, certificateBenefit } from '../components/Benefits';
 
 const A = '/assets/academie/';
 const academyBenefits = [
   [ChefHat, 'Chefs pâtissiers', 'expérimentés'],
   [UsersThree, 'Petits groupes', '(12 participants max)'],
   [ForkKnife, 'Matériel professionnel', 'haut de gamme'],
+  certificateBenefit,
   [Star, 'Une expérience', 'unique et gourmande'],
 ];
 

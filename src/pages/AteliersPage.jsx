@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Briefcase, ChartBar, ChefHat, ForkKnife, Star, User, UsersThree } from '@phosphor-icons/react';
 import { Arrow } from '../components/Arrow';
-import { Benefits } from '../components/Benefits';
+import { Benefits, certificateBenefit } from '../components/Benefits';
 import { workshops, workshopHref } from '../data/workshops';
 import '../ateliers-page.css';
 
@@ -16,6 +16,7 @@ const pageBenefits = [
   [ChefHat, 'Chefs pâtissiers', 'expérimentés'],
   [UsersThree, 'Petits groupes', '(12 participants max)'],
   [ForkKnife, 'Matériel professionnel', 'haut de gamme'],
+  certificateBenefit,
   [Star, 'Une expérience', 'unique et gourmande'],
 ];
 

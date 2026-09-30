@@ -323,7 +323,7 @@ body{font-family:var(--dyc-body-font)}.hero-description,.card-copy>p,.academy-co
 
 /* Benefits: clear typography and crisp vector icons. */
 .benefits {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   height: auto;
   margin-top: 28px;
   padding: 28px 0;
@@ -345,6 +345,7 @@ body{font-family:var(--dyc-body-font)}.hero-description,.card-copy>p,.academy-co
   .benefits { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 0; }
   .benefit { justify-content: flex-start; padding: 4px 24px; }
   .benefit:nth-child(odd) { border-left: 0; }
+  .benefits > .benefit:nth-child(5):last-child { grid-column: 1 / -1; width: 50%; justify-self: center; }
 }
 @media (max-width: 600px) {
   .benefits { padding: 24px 0; gap: 24px 20px; }

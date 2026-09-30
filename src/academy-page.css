@@ -24,7 +24,7 @@
 .academy-story-copy .pill { margin-top: .21vw; }
 
 .academy-benefits { width: 88.24%; margin: 0 auto; }
-.academy-benefits .benefits { grid-template-columns: repeat(4, minmax(0, 1fr)); height: auto; min-height: 8.61vw; margin: 0; padding: 1.89vw 0; align-items: stretch; }
+.academy-benefits .benefits { grid-template-columns: repeat(5, minmax(0, 1fr)); height: auto; min-height: 8.61vw; margin: 0; padding: 1.89vw 0; align-items: stretch; }
 .academy-benefits .benefit { isolation: isolate; padding: 0 1.26vw; gap: 1.36vw; justify-content: center; }
 .academy-benefits .benefit > svg { width: clamp(34px, 3.78vw, 54px); height: clamp(34px, 3.78vw, 54px); flex-shrink: 0; color: var(--dyc-bronze); }
 .academy-benefits .benefit p { font-size: clamp(12px, 1.155vw, 18px); line-height: 1.4; }

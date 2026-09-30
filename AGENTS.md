@@ -24,7 +24,8 @@
 
 - The groups/events section should have larger, well-spaced copy and a cream gradient blending the supplied group photo into its text panel; avoid a hard dividing edge.
 
-- Keep the four workshop benefits readable: larger high-contrast labels, crisp vector icons, and a balanced responsive layout rather than tiny raster icons and text.
+- Keep the workshop benefits readable: larger high-contrast labels, crisp vector icons, and a balanced responsive layout rather than tiny raster icons and text.
+- Whenever a benefits strip lists chefs pâtissiers expérimentés, petits groupes, and professional equipment or ingredients, include a matching “Certificats de formation” icon and label without removing the other benefits.
 
 - Workshop card titles and descriptions must use natural text flow without forced line breaks. Keep titles on one line where space permits, with larger, readable descriptions and prices. Card copy must grow with its content rather than use a fixed height.
 

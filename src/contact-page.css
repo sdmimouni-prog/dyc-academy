@@ -57,7 +57,9 @@
 .contact-location-heading h2 { font-size: clamp(32px, 3.1vw, 50px); }
 .contact-location-heading > p { padding-bottom: 2px; font-size: clamp(13px, 1.14vw, 18px); line-height: 1.32; }
 .contact-map { position: relative; height: 20.5vw; min-height: 220px; max-height: 370px; overflow: hidden; border-radius: 5px; background: #e9e7de; }
-.contact-map iframe { display: block; width: 100%; height: 100%; border: 0; filter: saturate(.85); }
+.contact-map .contact-map-placeholder { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 53%; filter: brightness(.68); }
+.contact-map iframe { position: relative; display: block; width: 100%; height: 100%; border: 0; opacity: 0; filter: saturate(.85); transition: opacity .25s ease; }
+.contact-map iframe.ready { opacity: 1; }
 .contact-map-fallback { background: #e5dac9; }
 .contact-map-fallback > img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 53%; filter: brightness(.68); }
 .contact-map-unlocated { position: absolute; right: 18px; bottom: 16px; display: flex; align-items: center; gap: 7px; border-radius: 999px; padding: 8px 12px; background: #fffcf4e8; color: #3d3429; font-size: 12px; }

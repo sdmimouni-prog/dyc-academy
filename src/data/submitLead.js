@@ -20,7 +20,7 @@ export function buildLeadEmailHref(data, recipient) {
 export async function submitLead(data) {
   const endpoint = siteConfig.contact.formEndpoint;
   if (!endpoint) {
-    const recipient = siteConfig.contact.businessEmail || siteConfig.contact.email;
+    const recipient = siteConfig.contact.email;
     if (!recipient) throw new Error('unconfigured');
     return { delivery: 'email-draft', href: buildLeadEmailHref(data, recipient) };
   }

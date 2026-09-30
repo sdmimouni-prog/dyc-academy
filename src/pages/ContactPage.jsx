@@ -22,7 +22,7 @@ function ContactDetails() {
   const { contact } = siteConfig;
   const details = [
     { Icon: MapPin, label: contact.name, value: contact.address },
-    { Icon: Phone, label: 'Téléphone', value: contact.phone || 'À renseigner', href: contact.phone && `tel:${contact.phone.replace(/\s/g, '')}` },
+    { Icon: Phone, label: 'Téléphone', value: contact.phone || 'À renseigner', href: contact.phone && `tel:${contact.phone.replace(/^00/, '+').replace(/\s/g, '')}` },
     { Icon: Envelope, label: 'Email', value: contact.email || 'À renseigner', href: contact.email && `mailto:${contact.email}` },
     { Icon: Clock, label: 'Horaires', value: contact.openingHours || 'À renseigner' },
   ];
@@ -118,17 +118,25 @@ function ContactForm() {
 
 function AcademyLocation() {
   const { contact } = siteConfig;
+  const [mapReady, setMapReady] = useState(false);
   const mapSource = contact.mapEmbedUrl || (contact.latitude != null && contact.longitude != null
     ? `https://maps.google.com/maps?q=${contact.latitude},${contact.longitude}&z=14&output=embed`
     : null);
+  const onMapLoad = event => {
+    try {
+      if (event.currentTarget.contentWindow?.location.href !== 'about:blank') setMapReady(true);
+    } catch {
+      setMapReady(true);
+    }
+  };
 
   return <section className="contact-location" aria-labelledby="contact-location-title">
     <div className="contact-location-heading">
-      <div><p className="eyebrow">VENEZ NOUS RENCONTRER</p><h2 id="contact-location-title">Notre académie vous accueille à Témara.</h2></div>
-      <p>Un lieu unique, dédié à la pâtisserie, au chocolat<br /> et au partage, à quelques minutes de Rabat.</p>
+      <div><p className="eyebrow">VENEZ NOUS RENCONTRER</p><h2 id="contact-location-title">Notre académie vous accueille à {contact.city}.</h2></div>
+      <p>Un lieu unique, dédié à la pâtisserie, au chocolat<br /> et au partage, à {contact.city}.</p>
     </div>
     <div className={`contact-map ${mapSource ? '' : 'contact-map-fallback'}`}>
-      {mapSource ? <iframe src={mapSource} title={`Carte de ${contact.name}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /> : <><img src="/assets/academie/espace-academie.png" alt="L’espace de l’académie DYC" loading="lazy" /><p className="contact-map-unlocated"><MapPin size={17} weight="light" aria-hidden="true" /> Localisation exacte à confirmer</p></>}
+      {mapSource ? <><img className="contact-map-placeholder" src="/assets/academie/espace-academie.png" alt="" loading="lazy" /><iframe className={mapReady ? 'ready' : ''} src={mapSource} title={`Carte de ${contact.name}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" onLoad={onMapLoad} /></> : <><img src="/assets/academie/espace-academie.png" alt="L’espace de l’académie DYC" loading="lazy" /><p className="contact-map-unlocated"><MapPin size={17} weight="light" aria-hidden="true" /> Localisation exacte à confirmer</p></>}
       <div className="contact-map-card">
         <h3>{contact.name}</h3>
         <p>{contact.address}</p>

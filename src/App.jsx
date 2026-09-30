@@ -16,7 +16,7 @@ const pages = {
   "/": { name: "home", title: "DYC — Culinary Arts Academy", Component: HomePage },
   "/academie": { name: "academie", title: "L’Académie — DYC Culinary Arts Academy", Component: AcademyPage },
   "/ateliers-masterclasses": { name: "ateliers", title: "Ateliers & Masterclasses — DYC Culinary Arts Academy", Component: AteliersPage },
-  "/contact": { name: "contact", title: "Contact | DYC Culinary Arts Academy", description: "Contactez DYC Culinary Arts Academy à Témara pour réserver un atelier, une masterclass, organiser un Team Building ou nous parler de votre projet.", Component: ContactPage },
+  "/contact": { name: "contact", title: "Contact | DYC Culinary Arts Academy", description: "Contactez DYC Culinary Arts Academy à Casablanca pour réserver un atelier, une masterclass, organiser un Team Building ou nous parler de votre projet.", Component: ContactPage },
   "/entreprises": { name: "entreprises", title: "Team Building Culinaire & Ateliers Entreprises | DYC Academy", description: "Organisez un Team Building culinaire avec DYC Academy : ateliers chocolat, Cake Challenge, événements d’entreprise et expériences sur mesure.", Component: EntreprisesPage },
 };
 

@@ -3,7 +3,7 @@
 export const programDetails = {
   'layer-cake': {
     tagline: 'Stack. Frost. Decorate.',
-    heroDescription: 'Maîtrisez les techniques du Layer Cake et réalisez votre propre gâteau de 16 parts. Repartez fièrement avec votre création à déguster ou à offrir !',
+    heroDescription: 'Maîtrisez les techniques du Layer Cake et réalisez votre propre gâteau de 12 parts. Repartez fièrement avec votre création à déguster ou à offrir !',
     durationLabel: '1 jour · 6h',
     minAge: '16 ans minimum',
     heroImage: '/assets/layer-cake-framboises.png',

@@ -4,7 +4,7 @@ export const workshops = [
     title: 'Masterclass Layer Cake', name: 'Masterclass Layer Cake',
     menuTitle: 'Layer Cake', menuDescription: 'Maîtrisez les techniques et réalisez votre propre gâteau.', menuAction: 'Voir l’atelier',
     image: 'layer-cake-framboises', duration: '1 JOUR · 6H',
-    description: 'Maîtrisez les techniques du Layer Cake et réalisez votre propre gâteau de 16 parts.',
+    description: 'Maîtrisez les techniques du Layer Cake et réalisez votre propre gâteau de 12 parts.',
     capacity: 'Jusqu’à 12 participants', level: 'Débutant à intermédiaire', takeaway: 'Chaque participant repart avec son gâteau',
     price: '790',
   },

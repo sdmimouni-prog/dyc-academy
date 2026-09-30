@@ -17,7 +17,7 @@ export function AcademyPage({ onOpen }) {
       <div className="academy-hero-copy">
         <p className="eyebrow">DYC CULINARY ARTS ACADEMY</p>
         <h1 id="academy-title">L’académie</h1>
-        <p className="academy-hero-subtitle">Un lieu où la passion devient savoir-faire</p>
+        <p className="academy-hero-subtitle">Un lieu où la passion s’exprime</p>
         <p className="academy-hero-description">Des formations culinaires et pâtissières pour apprendre,<br className="academy-desktop-break" /> créer et se révéler.</p>
         <a className="pill home-cta" href="/#ateliers">Découvrir nos ateliers <Arrow /></a>
       </div>

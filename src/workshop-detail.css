@@ -1,0 +1,318 @@
+:is(.workshop-detail--layer-cake, .workshop-detail--cake-design, .workshop-detail--chocolat-pralines-mendiants) { overflow: clip; background: var(--dyc-cream); color: var(--dyc-ink); }
+:is(.workshop-detail--layer-cake, .workshop-detail--cake-design, .workshop-detail--chocolat-pralines-mendiants) :is(h1, h2, h3) { font-family: var(--dyc-display-font); font-weight: 400; }
+:is(.workshop-detail--layer-cake, .workshop-detail--cake-design, .workshop-detail--chocolat-pralines-mendiants) .eyebrow { color: #8a7158; font-size: clamp(10px, .9vw, 14px); letter-spacing: .24em; line-height: 1.3; }
+
+.detail-hero { position: relative; isolation: isolate; height: 39.5vw; min-height: 480px; max-height: 670px; background: #15110e; color: #fffaf3; }
+.detail-hero::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #090807da 0%, #0b0909b8 30%, #100c0c27 52%, #08070742 100%), linear-gradient(0deg, #0b090978, transparent 30%); }
+.detail-hero-image { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 56% 52%; }
+.detail-hero-content { position: absolute; top: 24.1%; left: 7.15%; width: 55%; }
+.detail-breadcrumb { position: static; display: flex; align-items: center; flex-wrap: wrap; gap: .7em; width: auto; margin: 0 0 clamp(22px, 2.25vw, 35px); padding: 0; border-radius: 0; background: transparent; box-shadow: none; color: #fff; font-family: var(--dyc-body-font); font-size: clamp(11px, .96vw, 15px); line-height: 1.3; text-shadow: 0 1px 4px #0009; white-space: normal; }
+.detail-breadcrumb a { padding: 0; transition: color .2s ease; }
+.detail-breadcrumb a:hover { color: #e7d3b2; }
+.detail-breadcrumb > span[aria-hidden] { opacity: .75; }
+.detail-hero-content > .eyebrow { margin-bottom: clamp(10px, 1vw, 16px); color: #fffaf3; font-size: clamp(12px, 1.3vw, 19px); }
+.detail-hero h1 { max-width: 13ch; font-size: clamp(48px, 4.7vw, 77px); line-height: .97; letter-spacing: -.035em; white-space: nowrap; }
+.detail-hero-description { width: min(78%, 540px); margin-top: clamp(18px, 2vw, 32px); font-family: Montserrat, var(--dyc-body-font); font-size: clamp(13px, 1.18vw, 18px); line-height: 1.55; }
+.detail-hero-facts { display: flex; align-items: center; gap: clamp(15px, 1.8vw, 31px); width: max-content; max-width: 100%; margin: clamp(25px, 2.7vw, 46px) 0 0; padding: 0; list-style: none; }
+.detail-hero-facts li { display: flex; align-items: center; gap: clamp(7px, .8vw, 12px); max-width: 180px; font-size: clamp(11px, 1vw, 16px); line-height: 1.25; }
+.detail-hero-facts svg { width: clamp(23px, 2.5vw, 34px); height: clamp(23px, 2.5vw, 34px); flex: 0 0 auto; }
+.detail-booking { position: absolute; top: 25.4%; right: 5.1%; width: clamp(235px, 22.5vw, 360px); min-height: 57%; padding: clamp(20px, 2.25vw, 36px); border-radius: 6px; background: #fbf9f5f4; box-shadow: 0 12px 50px #0004; color: #181715; }
+.detail-booking-price { white-space: nowrap; }
+.detail-booking-price strong { font-size: clamp(23px, 2.35vw, 37px); }
+.detail-booking-price span { font-size: clamp(12px, 1.03vw, 16px); }
+.detail-booking-note { margin-top: 5px; font-size: 12px; }
+.detail-booking .detail-booking-button { display: flex; justify-content: space-between; width: 100%; min-height: clamp(43px, 4vw, 62px); margin-top: clamp(12px, 1.2vw, 19px); padding: 0 clamp(15px, 1.5vw, 24px); border-radius: 999px; background: #211f1b; color: #fffaf3; font-size: clamp(12px, 1.06vw, 16px); transition: transform .3s ease, background .3s ease, box-shadow .3s ease; }
+.detail-booking-button:hover { background: #594128; box-shadow: 0 10px 22px #0003; }
+.detail-booking-button svg { width: 17px; height: 17px; }
+.detail-booking-facts { display: grid; gap: clamp(12px, 1.4vw, 21px); margin: clamp(20px, 2.05vw, 33px) 0 0; padding: 0; list-style: none; }
+.detail-booking-facts li { display: flex; align-items: center; gap: clamp(12px, 1.25vw, 19px); font-size: clamp(11px, .98vw, 15px); line-height: 1.25; }
+.detail-booking-facts svg { width: clamp(22px, 2.2vw, 31px); height: clamp(22px, 2.2vw, 31px); flex: 0 0 auto; color: #574127; }
+
+.detail-introduction { display: grid; grid-template-columns: 51% 49%; min-height: 36.8vw; background: #fbf9f5; }
+.detail-introduction-copy { align-self: center; padding: clamp(25px, 2.8vw, 45px) 8% clamp(25px, 2.8vw, 45px) 13.65%; }
+.detail-introduction h2 { max-width: 19ch; margin: clamp(11px, 1.1vw, 18px) 0 clamp(15px, 1.6vw, 26px); font-size: clamp(35px, 3.65vw, 59px); line-height: .99; }
+.detail-introduction-copy > p:not(.eyebrow) { max-width: 62ch; margin-top: clamp(12px, 1.15vw, 19px); font-family: Montserrat, var(--dyc-body-font); font-size: clamp(12px, 1.12vw, 18px); line-height: 1.53; }
+.detail-introduction .pill { min-height: clamp(40px, 3.5vw, 56px); margin-top: clamp(14px, 1.65vw, 27px); }
+.detail-introduction-photo { min-height: 36.8vw; overflow: hidden; }
+.detail-introduction-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.workshop-detail--layer-cake .detail-introduction-photo { background: url('/assets/layer-cake-maquette.png') -51.05vw -39.43vw / 100vw auto no-repeat; }
+.workshop-detail--layer-cake .detail-introduction-photo img { visibility: hidden; }
+
+.detail-program { min-height: 31.7vw; padding: clamp(27px, 2.75vw, 44px) 6.8% clamp(34px, 3.7vw, 60px); text-align: center; background: #fbf9f5; }
+.detail-program h2 { margin: clamp(8px, .8vw, 13px) auto 0; font-size: clamp(29px, 3.05vw, 49px); line-height: 1.05; }
+.detail-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; max-width: 1500px; margin: clamp(30px, 3.25vw, 52px) auto 0; padding: 0; list-style: none; text-align: left; }
+.detail-steps > li { position: relative; min-width: 0; padding: clamp(43px, 4.4vw, 70px) clamp(9px, 1vw, 16px) 0; }
+.detail-steps > li::before { content: ''; position: absolute; top: 0; right: -50%; left: -50%; border-top: 1px solid #baa98d; }
+.detail-steps > li:first-child::before { left: 50%; }
+.detail-steps > li:last-child::before { right: 50%; }
+.detail-step-number { position: absolute; z-index: 1; top: 0; left: 50%; display: grid; width: clamp(38px, 4vw, 64px); height: clamp(38px, 4vw, 64px); place-items: center; border-radius: 50%; background: #eadbc5; font-size: clamp(11px, 1.1vw, 17px); font-weight: 700; transform: translate(-50%, -50%); }
+.detail-steps h3 { margin-bottom: clamp(8px, .9vw, 14px); font-size: clamp(19px, 2.05vw, 33px); line-height: 1.05; }
+.detail-steps ul { margin: 0; padding-left: 1.15em; font-family: Montserrat, var(--dyc-body-font); font-size: clamp(11px, 1.05vw, 16px); line-height: 1.52; }
+.detail-steps ul li { padding-left: 0; }
+
+.detail-included { display: grid; grid-template-columns: 43% 57%; min-height: 24vw; background: #eee7dc; }
+.detail-included-photo { position: relative; min-height: 24vw; overflow: hidden; }
+.detail-included-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, #0807066c, transparent 64%); }
+.detail-included-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.workshop-detail--layer-cake .detail-included-photo { background: url('/assets/layer-cake-maquette.png') 0 -108.03vw / 100vw auto no-repeat; }
+.workshop-detail--layer-cake .detail-included-photo img,
+.workshop-detail--layer-cake .detail-included-photo > span { visibility: hidden; }
+.detail-included-photo > span { position: absolute; z-index: 1; bottom: 17%; left: 8%; color: #fff; font-family: 'DYC Signature', cursive; font-size: clamp(23px, 3.5vw, 58px); line-height: .8; white-space: pre-line; transform: rotate(-10deg); text-shadow: 0 2px 8px #0009; }
+.detail-included-copy { align-self: center; padding: 4% 6% 4% 5%; }
+.detail-included h2 { margin: clamp(10px, 1.2vw, 19px) 0 clamp(25px, 3vw, 48px); font-size: clamp(32px, 3.3vw, 54px); line-height: 1; }
+.detail-included-copy ul { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 7px; margin: 0; padding: 0; list-style: none; text-align: center; }
+.detail-included-copy li { display: flex; min-width: 0; align-items: center; flex-direction: column; gap: clamp(9px, 1.1vw, 18px); font-size: clamp(10px, .94vw, 15px); line-height: 1.32; }
+.detail-included-copy li svg { width: clamp(27px, 2.8vw, 44px); height: clamp(27px, 2.8vw, 44px); color: #5b432c; }
+
+.detail-takeaways { display: grid; grid-template-columns: 42% 26% 32%; align-items: stretch; min-height: 39vw; padding: clamp(20px, 2.25vw, 36px) 0 clamp(16px, 1.65vw, 26px) 5.1%; background: #fbf9f5; }
+.detail-takeaways-image { display: flex; min-width: 0; flex-direction: column; padding-right: 5%; }
+.detail-takeaways h2 { margin: clamp(7px, .7vw, 11px) 0 clamp(15px, 1.5vw, 24px); font-size: clamp(34px, 3.25vw, 52px); line-height: 1; }
+.detail-takeaways-image img { display: block; width: 100%; height: 100%; min-height: 0; flex: 1; object-fit: cover; object-position: 67% center; border-radius: 4px; }
+.detail-takeaways-list { display: grid; align-content: center; gap: clamp(12px, 1.4vw, 22px); min-width: 0; margin: 0; padding: 6% 12% 0 4%; list-style: none; }
+.detail-takeaways-list li { display: flex; gap: clamp(8px, .9vw, 14px); align-items: flex-start; font-family: Montserrat, var(--dyc-body-font); font-size: clamp(11px, 1.02vw, 16px); line-height: 1.4; }
+.detail-check { display: grid; width: clamp(22px, 2.3vw, 36px); height: clamp(22px, 2.3vw, 36px); flex: 0 0 auto; place-items: center; border-radius: 50%; background: #e9d8bd; }
+.detail-quote { display: flex; align-items: center; flex-direction: column; justify-content: center; min-width: 0; margin: 0; padding: 12% 11%; background: #ebe2d5 url('/assets/academie/philosophie-decoration.png') right center / auto 100% no-repeat; text-align: center; }
+.detail-quote-mark { align-self: flex-start; margin-left: 10%; font-family: var(--dyc-display-font); font-size: clamp(48px, 5.4vw, 87px); line-height: .6; }
+.detail-quote p { max-width: 21ch; margin-top: clamp(14px, 1.7vw, 27px); font-family: var(--dyc-display-font); font-size: clamp(20px, 2.1vw, 34px); font-style: italic; line-height: 1.12; }
+.detail-quote cite { margin-top: clamp(22px, 2.4vw, 38px); font-size: clamp(9px, .8vw, 13px); font-style: normal; letter-spacing: .2em; }
+
+.detail-audiences { padding: clamp(25px, 2.5vw, 40px) 5.1% clamp(28px, 3vw, 48px); background: #fbf9f5; }
+.detail-audiences h2 { margin: clamp(7px, .7vw, 11px) 0 clamp(22px, 2.25vw, 36px); font-size: clamp(33px, 3.15vw, 51px); line-height: 1; }
+.detail-audience-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(7px, .8vw, 13px); }
+.detail-audience-grid article { display: flex; align-items: center; gap: clamp(13px, 1.6vw, 26px); min-height: clamp(93px, 9.2vw, 147px); padding: clamp(16px, 2vw, 32px); border-radius: 5px; background: #f2eee7; }
+.detail-audience-grid svg { width: clamp(29px, 3.5vw, 56px); height: clamp(29px, 3.5vw, 56px); flex: 0 0 auto; color: #543d2b; }
+.detail-audience-grid h3 { font-family: var(--dyc-body-font); font-size: clamp(13px, 1.13vw, 18px); line-height: 1.2; }
+.detail-audience-grid p { margin-top: 5px; font-size: clamp(11px, .95vw, 15px); line-height: 1.35; }
+
+.detail-closing { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 14.2vw; padding: 2% 7% 2% 44.5%; background: #181612; color: #fffaf3; position: relative; isolation: isolate; }
+.detail-closing::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #120f0e1c, #14110ec7 45%, #15120f 78%), var(--detail-closing-image) left 57% / 54% auto no-repeat; }
+.workshop-detail--layer-cake .detail-closing::after { content: ''; position: absolute; z-index: -1; top: 0; bottom: 0; left: 0; width: 43%; background: url('/assets/layer-cake-maquette.png') 0 -194.81vw / 100vw auto no-repeat; }
+.detail-closing .eyebrow { color: #fffaf3; }
+.detail-closing h2 { max-width: 15ch; margin-top: clamp(8px, 1vw, 16px); font-size: clamp(33px, 3.5vw, 56px); line-height: .99; }
+.detail-closing .pill { min-height: clamp(41px, 4.2vw, 67px); flex: 0 0 auto; }
+
+/* The shared programme template switches from the Layer Cake timeline to two
+   photographic day cards when a programme supplies programDays. */
+.detail-program--days { min-height: 38.6vw; padding-top: clamp(20px, 2vw, 32px); padding-bottom: clamp(18px, 2vw, 32px); }
+.detail-day-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(13px, 1.45vw, 23px); max-width: 1500px; margin: clamp(25px, 2.55vw, 41px) auto 0; text-align: left; }
+.detail-day-card { display: grid; grid-template-columns: 40% 60%; min-width: 0; min-height: clamp(260px, 26.25vw, 420px); padding: clamp(10px, 1.1vw, 17px); border: 1px solid #e5ded3; border-radius: 5px; background: #faf8f4; }
+.detail-day-card > img { display: block; width: 100%; height: 100%; min-height: 0; object-fit: cover; border-radius: 4px; }
+.detail-day-content { align-self: center; min-width: 0; padding: 0 clamp(15px, 2vw, 32px); }
+.detail-day-label { margin-bottom: clamp(7px, .65vw, 11px); font-size: clamp(15px, 1.55vw, 25px); letter-spacing: .08em; }
+.detail-day-content h3 { margin-bottom: clamp(17px, 1.65vw, 27px); font-size: clamp(21px, 2.05vw, 33px); line-height: 1.08; }
+.detail-day-content ul { display: grid; gap: clamp(7px, .7vw, 11px); margin: 0; padding: 0; list-style: none; }
+.detail-day-content li { display: flex; align-items: flex-start; gap: clamp(8px, .95vw, 15px); font-family: Montserrat, var(--dyc-body-font); font-size: clamp(11px, 1.02vw, 16px); line-height: 1.34; }
+.detail-day-content .detail-check { width: clamp(19px, 1.85vw, 30px); height: clamp(19px, 1.85vw, 30px); }
+
+.workshop-detail--cake-design .detail-hero { height: 41.3vw; }
+.workshop-detail--cake-design .detail-hero-content { top: 26%; }
+.workshop-detail--cake-design .detail-hero-description { max-width: 520px; }
+.workshop-detail--cake-design .detail-introduction { min-height: 35.8vw; grid-template-columns: 50.3% 49.7%; }
+.workshop-detail--cake-design .detail-introduction-copy { padding-left: 12.6%; }
+.workshop-detail--cake-design .detail-introduction h2 { max-width: none; }
+.workshop-detail--cake-design .detail-introduction-copy > p:not(.eyebrow) { margin-top: clamp(9px, .88vw, 14px); }
+.workshop-detail--cake-design .detail-introduction-photo { min-height: 35.8vw; }
+.workshop-detail--cake-design .detail-included { min-height: 22.6vw; grid-template-columns: 40.6% 59.4%; }
+.workshop-detail--cake-design .detail-included-photo { min-height: 22.6vw; }
+.workshop-detail--cake-design .detail-included-copy { padding-left: 4%; padding-right: 4%; }
+.detail-included-copy ul.detail-included-seven { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 5px; }
+.workshop-detail--cake-design .detail-included-copy li { font-size: clamp(9px, .84vw, 14px); }
+.workshop-detail--cake-design .detail-takeaways { min-height: 36.4vw; }
+.workshop-detail--cake-design .detail-takeaways-list { gap: clamp(7px, .75vw, 12px); padding-top: 1%; }
+.workshop-detail--cake-design .detail-takeaways-list li { font-size: clamp(11px, .93vw, 15px); }
+.workshop-detail--cake-design .detail-closing { min-height: 15.2vw; padding-left: 41.2%; }
+.workshop-detail--cake-design .detail-closing::before { background: linear-gradient(90deg, #100c0920, #17120fdc 44%, #17120f 78%), var(--detail-closing-image) -28vw 44% / 100vw auto no-repeat; }
+.workshop-detail--cake-design .detail-closing h2 { max-width: none; font-size: clamp(33px, 3.1vw, 50px); white-space: nowrap; }
+.detail-closing h2 em { font-weight: 400; }
+
+.workshop-detail--chocolat-pralines-mendiants .detail-hero { height: 39.3vw; }
+.workshop-detail--chocolat-pralines-mendiants .detail-hero::before { background: linear-gradient(90deg, #0b0807e8 0%, #100a08cb 31%, #100a0842 55%, #0b080780 100%); }
+.workshop-detail--chocolat-pralines-mendiants .detail-hero-content { top: 24%; }
+.workshop-detail--chocolat-pralines-mendiants .detail-hero h1 { line-height: .94; }
+.workshop-detail--chocolat-pralines-mendiants .detail-hero-description { width: min(75%, 530px); }
+.workshop-detail--chocolat-pralines-mendiants .detail-booking { top: 25%; }
+.workshop-detail--chocolat-pralines-mendiants .detail-booking-note { margin-top: 3px; font-size: clamp(11px, .92vw, 14px); }
+.workshop-detail--chocolat-pralines-mendiants .detail-introduction { min-height: 34.9vw; grid-template-columns: 49.4% 50.6%; }
+.workshop-detail--chocolat-pralines-mendiants .detail-introduction-photo { min-height: 34.9vw; }
+.workshop-detail--chocolat-pralines-mendiants .detail-introduction h2 { max-width: 17ch; }
+.workshop-detail--chocolat-pralines-mendiants .detail-program { min-height: 30.1vw; }
+.workshop-detail--chocolat-pralines-mendiants .detail-steps ul { list-style: none; padding-left: 0; }
+.workshop-detail--chocolat-pralines-mendiants .detail-steps ul li { position: relative; padding-left: 1em; }
+.workshop-detail--chocolat-pralines-mendiants .detail-steps ul li::before { content: '›'; position: absolute; left: 0; color: #5b432c; }
+
+.detail-creations { display: grid; grid-template-columns: 46% 54%; min-height: 28.4vw; background: #eee6dc; }
+.detail-creations-photo { position: relative; min-height: 28.4vw; overflow: hidden; }
+.detail-creations-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, #0e0807a6, transparent 70%); }
+.detail-creations-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.detail-creations-photo > span { position: absolute; z-index: 1; right: 7%; bottom: 10%; color: #fff; font-family: 'DYC Signature', cursive; font-size: clamp(27px, 3.5vw, 55px); line-height: .78; text-align: center; white-space: pre-line; transform: rotate(-10deg); text-shadow: 0 2px 8px #000b; }
+.detail-creations-copy { align-self: center; padding: 4% 5%; }
+.detail-creations h2 { margin: clamp(10px, 1.2vw, 18px) 0 clamp(22px, 2.5vw, 40px); font-size: clamp(33px, 3.25vw, 52px); line-height: 1; }
+.detail-creations-copy ul { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(8px, 1.25vw, 20px); margin: 0; padding: 0; list-style: none; text-align: center; }
+.detail-creations-copy li { display: flex; align-items: center; flex-direction: column; min-width: 0; font-size: clamp(11px, .98vw, 15px); line-height: 1.3; }
+.detail-creation-icon { display: grid; width: clamp(54px, 5.7vw, 91px); height: clamp(54px, 5.7vw, 91px); margin-bottom: clamp(12px, 1.1vw, 18px); place-items: center; border: 1px solid #d8c8ae; border-radius: 50%; color: #5b432c; }
+.detail-creations-copy strong { font-size: clamp(13px, 1.08vw, 17px); }
+.detail-creations-copy small { max-width: 17ch; margin-top: 4px; font-size: clamp(10px, .86vw, 13px); line-height: 1.25; }
+
+.detail-experiences { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2%; padding: 2.7% 4%; background: #fbf9f5; }
+.detail-experience-card { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-width: 0; min-height: 33.4vw; overflow: hidden; border-radius: 5px; color: #fffaf3; }
+.detail-experience-card::after { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(0deg, #0b0909f7 0%, #0b0909e8 28%, #0b09096b 67%, #0b090925 100%); }
+.detail-experience-card > img { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s ease; }
+.detail-experience-card:hover > img { transform: scale(1.045); }
+.detail-experience-content { width: 100%; padding: 5% 5% 4%; }
+.detail-experience-content h2 { display: flex; align-items: center; gap: 8px; margin-bottom: clamp(12px, 1.2vw, 19px); font-size: clamp(27px, 2.65vw, 42px); line-height: 1; }
+.detail-experience-content h2 svg { flex: 0 0 auto; }
+.detail-experience-content > p { max-width: 48ch; margin-bottom: clamp(14px, 1.5vw, 24px); font-family: Montserrat, var(--dyc-body-font); font-size: clamp(12px, 1.12vw, 18px); line-height: 1.5; }
+.detail-experience-content ul { display: grid; gap: clamp(6px, .65vw, 10px); margin: 0 0 clamp(20px, 2vw, 32px); padding: 0; list-style: none; }
+.detail-experience-content li { display: flex; align-items: center; gap: 9px; font-size: clamp(12px, 1.03vw, 16px); line-height: 1.25; }
+.detail-experience-content .detail-check { width: clamp(20px, 1.75vw, 28px); height: clamp(20px, 1.75vw, 28px); background: #e3d1b58a; }
+.detail-experience-content .pill { min-height: clamp(43px, 3.8vw, 61px); }
+.workshop-detail--chocolat-pralines-mendiants .detail-closing { min-height: 14.8vw; padding-left: 42.5%; }
+.workshop-detail--chocolat-pralines-mendiants .detail-closing::before { background: linear-gradient(90deg, #130b092d, #17100de2 46%, #17100f 84%), var(--detail-closing-image) -18vw 50% / 86vw auto no-repeat; }
+.workshop-detail--chocolat-pralines-mendiants .detail-closing h2 { max-width: none; font-size: clamp(33px, 3.1vw, 50px); white-space: nowrap; }
+
+@media (max-width: 1050px) {
+  .workshop-detail--cake-design .detail-hero { height: 570px; }
+  .workshop-detail--cake-design .detail-hero-content { top: 150px; }
+  .workshop-detail--cake-design .detail-closing { min-height: 200px; padding: 28px 6%; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-hero { height: 570px; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-hero-content { top: 150px; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-closing { min-height: 200px; padding: 28px 6%; }
+  .detail-creations-copy ul { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 15px; }
+  .detail-creations, .detail-creations-photo { min-height: 340px; }
+  .detail-experience-card { min-height: 450px; }
+  .workshop-detail--layer-cake .detail-introduction-photo,
+  .workshop-detail--layer-cake .detail-included-photo { background: none; }
+  .workshop-detail--layer-cake .detail-introduction-photo img,
+  .workshop-detail--layer-cake .detail-included-photo img,
+  .workshop-detail--layer-cake .detail-included-photo > span { visibility: visible; }
+  .workshop-detail--layer-cake .detail-closing::after { display: none; }
+  .detail-hero { height: 570px; }
+  .detail-hero-content { top: 150px; width: 60%; }
+  .detail-booking { top: 165px; right: 5%; }
+  .detail-hero h1 { font-size: 48px; }
+  .detail-hero-description { width: 68%; }
+  .detail-hero-facts { flex-wrap: wrap; width: 65%; gap: 15px; }
+  .detail-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); row-gap: 45px; }
+  .detail-steps > li::before { display: none; }
+  .detail-included-copy ul { grid-template-columns: repeat(3, 1fr); gap: 20px 10px; }
+  .detail-included { min-height: 310px; }
+  .detail-included-photo { min-height: 310px; }
+  .detail-takeaways { grid-template-columns: 45% 55%; }
+  .detail-quote { grid-column: 1 / -1; min-height: 230px; margin: 24px 5% 0 0; background-size: auto 155%; }
+  .detail-audience-grid { grid-template-columns: repeat(2, 1fr); }
+  .detail-day-card { grid-template-columns: 34% 66%; }
+  .detail-day-content { padding: 0 16px; }
+  .workshop-detail--cake-design .detail-included-copy ul.detail-included-seven { grid-template-columns: repeat(4, 1fr); gap: 17px 8px; }
+}
+
+@media (max-width: 900px) {
+  .detail-day-grid { grid-template-columns: 1fr; }
+  .detail-day-card { min-height: 290px; }
+  .detail-experiences { grid-template-columns: 1fr; gap: 18px; padding: 34px 5%; }
+  .detail-experience-card { min-height: 440px; }
+}
+
+@media (max-width: 700px) {
+  .workshop-detail--cake-design .detail-hero { height: auto; min-height: 0; max-height: none; }
+  .workshop-detail--cake-design .detail-hero-content { top: auto; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-hero { height: auto; min-height: 0; max-height: none; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-hero-content { top: auto; }
+  .detail-hero { height: auto; min-height: 0; max-height: none; padding: 145px 6% 30px; }
+  .detail-hero-image { height: 620px; object-position: 58% top; }
+  .detail-hero::before { z-index: -1; background: linear-gradient(180deg, #0a080980 0%, #0a0809c9 35%, #0a0809af 70%, #0a0809 100%); }
+  .workshop-detail--chocolat-pralines-mendiants .detail-hero::before { background: linear-gradient(180deg, #0a0809a8 0%, #0a0809d7 38%, #0a0809b5 72%, #0a0809 100%); }
+  .detail-hero-content { position: relative; top: auto; left: auto; width: 100%; }
+  .detail-breadcrumb { margin-bottom: 28px; font-size: 11px; }
+  .detail-hero h1 { max-width: none; font-size: clamp(38px, 9.5vw, 55px); white-space: normal; }
+  .detail-hero-description { width: min(100%, 38ch); font-size: 14px; }
+  .detail-hero-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: 18px 10px; margin-top: 28px; }
+  .detail-hero-facts li { max-width: none; font-size: 12px; }
+  .detail-booking { position: relative; top: auto; right: auto; width: 100%; min-height: 0; margin-top: 34px; padding: 22px; }
+  .detail-booking-price strong { font-size: 29px; }
+  .detail-booking-button { min-height: 50px; font-size: 14px; }
+  .detail-booking-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 9px; }
+  .detail-booking-facts li { gap: 7px; font-size: 11px; }
+  .detail-booking-facts svg { width: 21px; height: 21px; }
+  .detail-introduction { grid-template-columns: 1fr; }
+  .workshop-detail--cake-design .detail-introduction { grid-template-columns: 1fr; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-introduction { grid-template-columns: 1fr; }
+  .detail-introduction-copy { padding: 44px 6% 38px; }
+  .workshop-detail--cake-design .detail-introduction-copy { padding: 44px 6% 38px; }
+  .detail-introduction h2 { font-size: clamp(37px, 9vw, 52px); }
+  .detail-introduction-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.58; }
+  .detail-introduction-photo { height: 280px; min-height: 0; }
+  .workshop-detail--cake-design .detail-introduction-photo { min-height: 0; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-introduction-photo { min-height: 0; }
+  .workshop-detail--layer-cake .detail-introduction-photo,
+  .workshop-detail--layer-cake .detail-included-photo { background: none; }
+  .workshop-detail--layer-cake .detail-introduction-photo img,
+  .workshop-detail--layer-cake .detail-included-photo img,
+  .workshop-detail--layer-cake .detail-included-photo > span { visibility: visible; }
+  .detail-program { padding: 48px 6% 40px; text-align: left; }
+  .detail-program--days { min-height: 0; }
+  .detail-day-grid { gap: 18px; margin-top: 30px; }
+  .detail-day-card { display: block; padding: 12px; }
+  .detail-day-card > img { height: 210px; aspect-ratio: 1.6; }
+  .detail-day-content { padding: 21px 9px 13px; }
+  .detail-day-content h3 { font-size: 27px; }
+  .detail-day-content li { font-size: 14px; }
+  .detail-program h2 { font-size: clamp(31px, 7.5vw, 42px); }
+  .detail-steps { display: block; margin: 35px 0 0 16px; border-left: 1px solid #baa98d; }
+  .detail-steps > li { padding: 0 0 30px 45px; }
+  .detail-steps > li::before { display: none; }
+  .detail-step-number { top: 0; left: 0; width: 38px; height: 38px; transform: translate(-50%, 0); }
+  .detail-steps h3 { font-size: 27px; padding-top: 4px; }
+  .detail-steps ul { font-size: 14px; }
+  .detail-creations { grid-template-columns: 1fr; }
+  .detail-creations-photo { height: 240px; min-height: 0; }
+  .detail-creations-copy { padding: 42px 6% 46px; }
+  .detail-creations h2 { font-size: 39px; }
+  .detail-creations-copy ul { gap: 24px 12px; }
+  .detail-creations-copy li { font-size: 13px; }
+  .detail-creations-copy small { font-size: 11px; }
+  .detail-experiences { padding: 34px 6%; }
+  .detail-experience-card { min-height: 465px; }
+  .detail-experience-content { padding: 6%; }
+  .detail-experience-content h2 { font-size: 29px; }
+  .detail-experience-content > p, .detail-experience-content li { font-size: 13px; }
+  .detail-experience-content .pill { width: 100%; justify-content: center; }
+  .detail-included { grid-template-columns: 1fr; }
+  .workshop-detail--cake-design .detail-included { grid-template-columns: 1fr; }
+  .detail-included-photo { height: 250px; min-height: 0; }
+  .workshop-detail--cake-design .detail-included-photo { min-height: 0; }
+  .detail-included-copy { padding: 42px 6% 48px; }
+  .detail-included h2 { font-size: 39px; margin-bottom: 30px; }
+  .detail-included-copy ul { grid-template-columns: repeat(3, 1fr); }
+  .workshop-detail--cake-design .detail-included-copy ul.detail-included-seven { grid-template-columns: repeat(2, 1fr); gap: 22px 10px; }
+  .workshop-detail--cake-design .detail-included-copy li { font-size: 12px; }
+  .detail-included-copy li { font-size: 11px; }
+  .detail-takeaways { display: block; padding: 44px 6% 0; }
+  .detail-takeaways h2 { font-size: 40px; }
+  .detail-takeaways-image { padding: 0; }
+  .detail-takeaways-image img { height: 330px; flex: none; }
+  .detail-takeaways-list { padding: 32px 0; gap: 15px; }
+  .detail-takeaways-list li { font-size: 14px; }
+  .detail-quote { min-height: 300px; margin: 0 -6.8%; }
+  .detail-quote p { font-size: 27px; }
+  .detail-audiences { padding: 44px 6%; }
+  .detail-audiences h2 { font-size: 37px; }
+  .detail-audience-grid { grid-template-columns: 1fr; gap: 10px; }
+  .detail-audience-grid article { min-height: 95px; padding: 20px; }
+  .detail-audience-grid h3 { font-size: 16px; }
+  .detail-audience-grid p { font-size: 13px; }
+  .detail-closing { min-height: 260px; align-items: flex-start; flex-direction: column; justify-content: flex-end; gap: 22px; padding: 40px 6%; }
+  .workshop-detail--cake-design .detail-closing { min-height: 260px; padding: 40px 6%; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-closing { min-height: 260px; padding: 40px 6%; }
+  .detail-closing::before { background: linear-gradient(90deg, #15110ed2, #15110eaf), var(--detail-closing-image) center / cover no-repeat; }
+  .workshop-detail--cake-design .detail-closing::before { background: linear-gradient(90deg, #15110ed2, #15110eaf), var(--detail-closing-image) center / cover no-repeat; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-closing::before { background: linear-gradient(90deg, #15110ed2, #15110eaf), var(--detail-closing-image) center / cover no-repeat; }
+  .workshop-detail--layer-cake .detail-closing::after { display: none; }
+  .detail-closing h2 { font-size: 42px; }
+  .workshop-detail--cake-design .detail-closing h2 { font-size: 42px; white-space: normal; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-closing h2 { font-size: 42px; white-space: normal; }
+  .detail-closing .pill { min-height: 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .detail-breadcrumb a, .detail-booking-button, .detail-experience-card > img { transition: none; }
+}

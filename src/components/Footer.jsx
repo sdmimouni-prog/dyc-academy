@@ -4,7 +4,6 @@ export function Footer({ page, onOpen }) {
   const open = onOpen;
   const A = "/assets/";
   const homeHref = page === "home" ? "#accueil" : "/";
-  const homeAnchor = id => page === "home" ? `#${id}` : `/#${id}`;
   return <footer className="site-footer" id="footer" aria-label="Pied de page DYC">
   <div className="footer-inner">
     <div className="footer-invitation">
@@ -25,8 +24,8 @@ export function Footer({ page, onOpen }) {
         <nav className="footer-links" aria-labelledby="footer-explore-title">
           <a href={homeHref}>Accueil</a>
           <a href="/academie">L’académie</a>
-          <a href={homeAnchor("ateliers")}>Ateliers & Masterclasses</a>
-          <a href={homeAnchor("groupes")}>Groupes & Entreprises</a>
+          <a href="/ateliers-masterclasses">Ateliers & Masterclasses</a>
+          <a href="/entreprises">Groupes & Entreprises</a>
         </nav>
       </div>
       <div className="footer-column">
@@ -41,12 +40,12 @@ export function Footer({ page, onOpen }) {
       <div className="footer-column footer-contact">
         <h3>Créons un moment ensemble</h3>
         <p>Une envie, une question, un événement à imaginer ? Parlons-en.</p>
-        <button className="pill home-cta footer-contact-link" onClick={()=>open('contact')}>Contacter l’académie <Arrow/></button>
+        <a className="pill home-cta footer-contact-link" href="/contact">Contacter l’académie <Arrow/></a>
       </div>
     </div>
     <div className="footer-bottom">
       <p>© {new Date().getFullYear()} DYC Culinary Arts Academy. Tous droits réservés.</p>
-      <a href={page === "home" ? "#accueil" : "#academie-top"} className="footer-back-top">Retour en haut <span aria-hidden="true">↑</span></a>
+      <a href={page === "home" ? "#accueil" : page === "academie" ? "#academie-top" : "#page-top"} className="footer-back-top">Retour en haut <span aria-hidden="true">↑</span></a>
     </div>
   </div>
 </footer>;

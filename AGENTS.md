@@ -6,6 +6,12 @@
 
 - “Groupes & Entreprises” is a direct navigation link, without a submenu or dropdown chevron.
 
+- The global “Ateliers & Masterclasses” navigation item opens a three-card ivory mega-menu on desktop (Layer Cake, Cake Design, Chocolat) using the existing workshop images. On tablet/mobile, expose these as three links in the mobile navigation. Keep the rest of the shared header, footer, and Home visually unchanged.
+
+- `/ateliers-masterclasses` follows the supplied 2026-09-29 catalogue mockup. Keep the three workshop programmes in one data source shared by the catalogue, filters, mega-menu, Home cards and detail pages. Reuse the existing global Header and Footer, including the Footer’s final reservation invitation; do not duplicate them within catalogue pages.
+
+- `/ateliers-masterclasses/layer-cake` follows the supplied 2026-09-29 detail mockup. Its sections are data-driven so future programme details can reuse the layout. Preserve the existing short detail pages until their full content is supplied. The Layer Cake mockup explicitly includes a dark raspberry reservation band before the unchanged global Footer.
+
 - Academy and groups photos zoom very slowly from load and on hover; preserve their frames, signatures and fixed blending gradients.
 
 - Workshop cards lift gently with a warm shadow on hover; their photos visibly zoom 14% over 12 seconds from page load, plus a responsive 6% hover zoom. Respect reduced-motion.

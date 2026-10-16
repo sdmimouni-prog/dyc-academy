@@ -2,6 +2,9 @@
 
 ## DYC user preferences
 
+- Confirmed 2026-10-16: the official address is “Les Orangeries Offices, 451 Bd Laymoun, Immeuble A N°142, Casablanca 20230”. Keep visible contact details, map links and search metadata consistent with `src/data/siteConfig.js`.
+- Use the official DYC logo for the favicon. The group workshop photo must show five distinct faces, while preserving the scene, clothing, poses, lighting and layout.
+
 - All pages use `SiteLayout` with the official shared `Header` and `Footer`. Preserve the Home visually when extending the site. `/academie` follows the supplied 2026-09-29 academy mockup, with existing Home typography, tokens, buttons, hover effects and responsive breakpoints. The official footer invitation supplies the final creation CTA; do not duplicate it.
 
 - “Groupes & Entreprises” is a direct navigation link, without a submenu or dropdown chevron.

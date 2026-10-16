@@ -1,9 +1,13 @@
-const academyAddress = 'Les Orangeries Offices, Immeuble A N°142, 451 Bd Laymoun, Casablanca 20230';
+const streetAddress = 'Les Orangeries Offices, 451 Bd Laymoun, Immeuble A N°142';
+const academyAddress = `${streetAddress}, Casablanca 20230`;
 
 export const siteConfig = {
   contact: {
     name: 'DYC Culinary Arts Academy',
     address: academyAddress,
+    streetAddress,
+    postalCode: '20230',
+    country: 'MA',
     city: 'Casablanca',
     phone: '00212 6 68 81 49 32',
     email: 'contact@dycacademy.ma',

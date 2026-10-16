@@ -22,7 +22,7 @@ const pageBenefits = [
 
 const audiences = [
   { title: 'Particuliers', text: 'Vivez une expérience unique, seul, en famille ou entre amis.', image: '/assets/hero-gateau-fleuri.png', Icon: User, href: '#programmes' },
-  { title: 'Groupes & Événements', text: 'Célébrez vos moments spéciaux autour de la pâtisserie.', image: '/assets/team-atelier-dyc.png', Icon: UsersThree, href: '/#groupes' },
+  { title: 'Groupes & Événements', text: 'Célébrez vos moments spéciaux autour de la pâtisserie.', image: '/assets/team-atelier-dyc-distinct.png', Icon: UsersThree, href: '/#groupes' },
   { title: 'Entreprises', text: 'Renforcez la cohésion de vos équipes avec une activité gourmande.', image: '/assets/academie/histoire-chocolat-fouet.png', Icon: Briefcase, href: '/#groupes' },
 ];
 

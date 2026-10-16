@@ -21,7 +21,7 @@ export function HomePage({ onOpen }) {
     <button className="pill home-cta dark" onClick={()=>open('evenement')}>Organiser un événement <Arrow/></button>
   </div>
   <div className="groups-visual">
-    <img src={A+'team-atelier-dyc.png'} alt="Un groupe partage un atelier chocolat à l’académie DYC" loading="lazy"/>
+    <img src={A+'team-atelier-dyc-distinct.png'} alt="Un groupe partage un atelier chocolat à l’académie DYC" loading="lazy"/>
   </div>
 </section><section className="quote" aria-label="Créer, c’est offrir un peu de bonheur à ceux qui nous entourent. DYC Culinary Arts Academy."></section></>;
 }

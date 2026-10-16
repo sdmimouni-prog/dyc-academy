@@ -19,16 +19,16 @@ const benefits = [
 ];
 
 const stages = [
-  { title: 'Accueil', text: 'Café d’accueil et présentation de l’atelier.', image: '/assets/team-atelier-dyc.png', position: '10% center' },
+  { title: 'Accueil', text: 'Café d’accueil et présentation de l’atelier.', image: '/assets/team-atelier-dyc-distinct.png', position: '10% center' },
   { title: 'Brief du chef', text: 'Explication des techniques et constitution des équipes.', image: '/assets/academie/histoire-chocolat-fouet.png', position: 'center' },
   { title: 'Challenge', text: 'Mise en pratique en équipe.', image: '/assets/chocolat-pralines-mendiants.png', position: 'center' },
-  { title: 'Création en équipe', text: 'Réalisation des pralines, mendiants ou gâteaux.', image: '/assets/team-atelier-dyc.png', position: '55% center' },
+  { title: 'Création en équipe', text: 'Réalisation des pralines, mendiants ou gâteaux.', image: '/assets/team-atelier-dyc-distinct.png', position: '55% center' },
   { title: 'Dégustation', text: 'Moment convivial autour de vos créations.', image: '/assets/academie/histoire-macarons.png', position: 'center' },
-  { title: 'Photo & souvenirs', text: 'Repartez avec vos créations et un souvenir inoubliable.', image: '/assets/team-atelier-dyc.png', position: '88% center' },
+  { title: 'Photo & souvenirs', text: 'Repartez avec vos créations et un souvenir inoubliable.', image: '/assets/team-atelier-dyc-distinct.png', position: '88% center' },
 ];
 
 const occasions = [
-  { Icon: UsersThree, title: 'Team Building', image: '/assets/team-atelier-dyc.png', experience: 'Team Building', position: 'center' },
+  { Icon: UsersThree, title: 'Team Building', image: '/assets/team-atelier-dyc-distinct.png', experience: 'Team Building', position: 'center' },
   { Icon: Briefcase, title: 'Séminaires', image: '/assets/academie/histoire-salle.png', experience: 'Séminaire', position: 'center' },
   { Icon: Gift, title: 'Célébrations d’équipe', image: '/assets/hero-gateau-fleuri.png', experience: 'Autre', position: 'center' },
   { Icon: UsersThree, title: 'Événements clients', image: '/assets/academie/tarte-framboises.png', experience: 'Événement client', position: 'center' },
@@ -114,7 +114,7 @@ export function EntreprisesPage() {
   const chooseExperience = value => setExperience(value);
 
   return <div className="corporate-page" id="page-top">
-    <section className="corporate-hero" aria-labelledby="corporate-title"><img src="/assets/team-atelier-dyc.png" alt="" fetchPriority="high" /><div className="corporate-hero-copy"><p className="eyebrow">TEAM BUILDING · ENTREPRISES · ÉVÉNEMENTS</p><h1 id="corporate-title">Créez ensemble.<br />Soudez vos équipes<br /> autrement.</h1><p>Des expériences culinaires immersives pour renforcer la collaboration, stimuler la créativité et partager un moment mémorable.</p><div className="corporate-hero-actions"><a href="#projet" className="pill home-cta" onClick={() => chooseExperience('Team Building')}>Organiser un Team Building <Arrow /></a><a href="#projet" className="pill corporate-outline">Demander un devis <Arrow /></a></div></div><p className="corporate-hero-signature" aria-hidden="true">Plus<br /> qu’un atelier,<br /> une expérience<br /> humaine.</p></section>
+    <section className="corporate-hero" aria-labelledby="corporate-title"><img src="/assets/team-atelier-dyc-distinct.png" alt="" fetchPriority="high" /><div className="corporate-hero-copy"><p className="eyebrow">TEAM BUILDING · ENTREPRISES · ÉVÉNEMENTS</p><h1 id="corporate-title">Créez ensemble.<br />Soudez vos équipes<br /> autrement.</h1><p>Des expériences culinaires immersives pour renforcer la collaboration, stimuler la créativité et partager un moment mémorable.</p><div className="corporate-hero-actions"><a href="#projet" className="pill home-cta" onClick={() => chooseExperience('Team Building')}>Organiser un Team Building <Arrow /></a><a href="#projet" className="pill corporate-outline">Demander un devis <Arrow /></a></div></div><p className="corporate-hero-signature" aria-hidden="true">Plus<br /> qu’un atelier,<br /> une expérience<br /> humaine.</p></section>
 
     <section className="corporate-benefits" aria-labelledby="corporate-benefits-title"><div className="corporate-benefits-intro"><p className="eyebrow">UNE EXPÉRIENCE QUI RASSEMBLE</p><h2 id="corporate-benefits-title">Bien plus qu’un atelier,<br />un véritable levier d’équipe.</h2></div><div className="corporate-benefits-grid">{benefits.map(({ Icon, title, text }) => <div className="corporate-benefit" key={title}><span><Icon size={27} weight="light" aria-hidden="true" /></span><h3>{title}</h3><p>{text}</p></div>)}</div></section>
 

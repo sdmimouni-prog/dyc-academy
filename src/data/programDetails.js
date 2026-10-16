@@ -174,7 +174,7 @@ export const programDetails = {
         'Plongez dans l’univers du chocolat artisanal à travers une immersion gourmande où chacun découvre, réalise et savoure ses propres pralines et mendiants.',
         'Guidés par un chef formateur, vous explorerez chaque étape de la création, du tempérage du chocolat à la réalisation des pralines et des mendiants, dans une ambiance conviviale et inspirante.',
       ],
-      image: '/assets/team-atelier-dyc.png',
+      image: '/assets/team-atelier-dyc-distinct.png',
       imageAlt: 'Participants travaillant le chocolat dans l’atelier DYC',
       imagePosition: '53% center',
     },
@@ -206,7 +206,7 @@ export const programDetails = {
         description: 'Une activité idéale pour renforcer la cohésion de vos équipes autour d’une expérience gourmande, créative et fédératrice.',
         points: ['Cohésion et collaboration', 'Créativité et esprit d’équipe', 'Adaptée aux séminaires et événements d’entreprise'],
         action: 'Organiser un team building', href: '/entreprises?experience=chocolat',
-        image: '/assets/team-atelier-dyc.png', imagePosition: '50% center',
+        image: '/assets/team-atelier-dyc-distinct.png', imagePosition: '50% center',
       },
       {
         title: 'Groupes & événements privés', icon: 'party',

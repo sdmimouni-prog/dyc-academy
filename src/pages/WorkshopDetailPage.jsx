@@ -1,5 +1,6 @@
+import { useEffect, useRef } from 'react';
 import {
-  BookOpen, ChartBar, ChefHat, Check, Clock, Coffee, Confetti, ForkKnife,
+  BookOpen, Certificate, ChartBar, ChefHat, Check, Clock, Coffee, Confetti, ForkKnife,
   Gift, GraduationCap, Heart, Leaf, Package, User, UsersThree,
 } from '@phosphor-icons/react';
 import { Arrow } from '../components/Arrow';
@@ -8,7 +9,7 @@ import '../ateliers-page.css';
 import '../workshop-detail.css';
 
 const icons = {
-  chef: ChefHat, leaf: Leaf, tools: ForkKnife, apron: User,
+  chef: ChefHat, leaf: Leaf, tools: ForkKnife, certificate: Certificate, apron: User,
   coffee: Coffee, package: Package, book: BookOpen, graduate: GraduationCap,
   heart: Heart, group: UsersThree, chart: ChartBar, gift: Gift, party: Confetti,
 };
@@ -36,11 +37,6 @@ function DetailHero({ workshop, detail, onBook }) {
   return <section className="detail-hero" aria-labelledby="detail-title">
     <img className="detail-hero-image" src={detail.heroImage} alt="" fetchPriority="high" style={{ objectPosition: detail.heroPosition }} />
     <div className="detail-hero-content">
-      <nav className="detail-breadcrumb" aria-label="Fil d’Ariane">
-        <a href="/">Accueil</a><span aria-hidden="true">›</span>
-        <a href="/ateliers-masterclasses">Ateliers &amp; Masterclasses</a><span aria-hidden="true">›</span>
-        <span aria-current="page">{workshop.title}</span>
-      </nav>
       <p className="eyebrow">{workshop.title.toUpperCase()}</p>
       <h1 id="detail-title">{detail.taglineLines ? <>{detail.taglineLines[0]}<br />{detail.taglineLines[1]}</> : detail.tagline}</h1>
       <p className="detail-hero-description">{detail.heroDescription}</p>
@@ -68,19 +64,34 @@ function Introduction({ data }) {
 }
 
 function ProgramSection({ detail }) {
+  const programRef = useRef(null);
+  useEffect(() => {
+    const section = programRef.current;
+    if (!section || !detail.programDays || !('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    section.classList.add('detail-program--reveal');
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        section.classList.add('detail-program--visible');
+        observer.disconnect();
+      }
+    }, { threshold: 0.12 });
+    observer.observe(section);
+    return () => observer.disconnect();
+  }, [detail]);
   if (!detail.programSteps?.length && !detail.programDays?.length) return null;
-  return <section className={`detail-program${detail.programDays ? ' detail-program--days' : ''}`} id="programme" aria-labelledby="detail-program-title">
+  return <section className={`detail-program${detail.programDays ? ' detail-program--days' : ''}`} ref={programRef} id="programme" aria-labelledby="detail-program-title">
     <p className="eyebrow">AU PROGRAMME</p>
     <h2 id="detail-program-title">{detail.programHeading || 'De la base à la décoration, pas à pas'}</h2>
     {detail.programDays ? <div className="detail-day-grid">
-      {detail.programDays.map(day => <article className="detail-day-card" key={day.day}>
-        <img src={day.image} alt={day.imageAlt} loading="lazy" style={{ objectPosition: day.imagePosition }} />
+      {detail.programDays.map((day, index) => <article className="detail-day-card" key={day.day} style={{ '--day-index': index }}>
+
         <div className="detail-day-content">
-          <p className="detail-day-label">{day.day}</p>
+          <div className="detail-day-heading"><p className="detail-day-label">{day.day}</p><span className="detail-day-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span></div>
           <h3>{day.title}</h3>
           <ul>{day.items.map(item => <li key={item}><span className="detail-check"><Check size={16} weight="light" aria-hidden="true" /></span><span>{item}</span></li>)}</ul>
         </div>
       </article>)}
+      {detail.programGallery?.length > 0 && <div className="detail-program-photo-stack">{detail.programGallery.map(photo => <figure className="detail-program-photo" key={photo.image}><img src={photo.image} alt={photo.alt} loading="lazy" style={{ objectPosition: photo.position }} /></figure>)}</div>}
     </div> : <ol className="detail-steps">
       {detail.programSteps.map((step, index) => <li key={step.title}>
         <span className="detail-step-number">{String(index + 1).padStart(2, '0')}</span>
@@ -207,7 +218,6 @@ function SimpleWorkshopDetail({ workshop, onOpen }) {
     <section className="workshop-detail-hero" aria-labelledby="workshop-detail-title">
       <img src={`/assets/${workshop.image}.png`} alt="" fetchPriority="high" />
       <div className="workshop-detail-heading">
-        <a href="/ateliers-masterclasses">Ateliers &amp; Masterclasses</a>
         <p className="eyebrow">{workshop.duration}</p>
         <h1 id="workshop-detail-title">{workshop.title}</h1>
       </div>

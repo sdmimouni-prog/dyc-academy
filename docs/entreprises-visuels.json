@@ -1,0 +1,10 @@
+{
+  "assets": {
+    "accueil": "public/assets/entreprises/atelier-chocolat-accueil-dyc.jpg",
+    "souvenirs": "public/assets/entreprises/photo-souvenirs-dyc.jpg",
+    "degustation": "public/assets/entreprises/degustation-pralines-dyc.jpg"
+  },
+  "degustationSource": "/Users/salaheddinemimouni/Downloads/WhatsApp Image 2026-10-04 at 13.10.30.jpeg",
+  "degustationProcessing": "User-supplied photo, copied unchanged.",
+  "accueilGeneration": "accueil-atelier-chocolat-prompt.json"
+}

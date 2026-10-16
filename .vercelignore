@@ -1,0 +1,7 @@
+qa/
+output/
+design-qa.md
+node_modules/
+dist/
+.env*
+!.env.example

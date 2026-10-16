@@ -19,6 +19,7 @@
 .academy-story { width: 88.24%; margin: 0 auto; padding: 2.31vw 0 2.1vw; display: grid; grid-template-columns: 1.35fr 1fr; gap: 5.04vw; align-items: center; }
 .academy-story-gallery { display: grid; grid-template-columns: 215fr 236fr; grid-template-rows: 175fr 134fr; gap: .84vw; aspect-ratio: 460 / 317; }
 .academy-story-gallery img { width: 100%; height: 100%; min-height: 0; min-width: 0; object-fit: cover; border-radius: 4px; }
+.academy-story-gallery .academy-story-room { object-position: center 30%; }
 .academy-story-copy h2 { margin-bottom: 1.26vw; }
 .academy-story-copy > p:not(.eyebrow) { margin-bottom: 1.68vw; }
 .academy-story-copy .pill { margin-top: .21vw; }
@@ -46,14 +47,14 @@
 .academy-citation-attribution { display: flex; align-items: center; gap: .8vw; margin-top: 2.3vw; font-size: clamp(7px, .73vw, 11px); letter-spacing: 2px; white-space: nowrap; }
 .academy-citation-attribution::before { content: ''; height: 1px; width: 4vw; flex-shrink: 0; background: currentColor; }
 
-.academy-space { display: grid; grid-template-columns: 40.23% 59.77%; }
-.academy-space-copy { padding: 3.15vw 2.1vw 2.1vw 5.88vw; }
+.academy-space { display: grid; grid-template-columns: 59.77% 40.23%; }
+.academy-space-copy { padding: 3.15vw 5.88vw 2.1vw 2.1vw; }
 .academy-space-copy .eyebrow { margin-bottom: .6vw; }
 .academy-space-copy > p:not(.eyebrow) { font-size: clamp(14px, 1.1vw, 18px); }
 .academy-space-copy h2 { font-size: clamp(30px, 3.15vw, 51px); margin-bottom: 1.4vw; }
 .academy-space-copy .pill { margin-top: 1.89vw; }
-.academy-space-visual { min-width: 0; position: relative; overflow: hidden; margin-top: 2.1vw; min-height: 23.63vw; border-radius: 4px 0 0 0; }
-.academy-space-visual img { position: absolute; width: 100%; height: 100%; object-fit: cover; }
+.academy-space-visual { min-width: 0; position: relative; overflow: hidden; min-height: 23.63vw; }
+.academy-space-visual img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
 
 @media (hover: hover) and (pointer: fine) {
   .academy-space-visual img { transition: scale 6s cubic-bezier(.22,1,.36,1); }
@@ -77,7 +78,7 @@
   .academy-citation-copy { width: 62%; padding: 44px 0 32px 24px; }
   .academy-quote-mark { height: 34px; font-size: 72px; margin-bottom: 16px; }
   .academy-citation-attribution { white-space: normal; letter-spacing: 1.5px; }
-  .academy-space-copy { padding: 30px 24px 30px 14.62%; }
+  .academy-space-copy { padding: 30px 14.62% 30px 24px; }
   .academy-space-copy .pill { padding: 0 20px; gap: 14px; font-size: 14px; }
 }
 @media (max-width: 760px) {

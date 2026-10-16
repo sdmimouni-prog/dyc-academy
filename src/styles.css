@@ -923,3 +923,4 @@ body{font-family:var(--dyc-body-font)}.hero-description,.card-copy>p,.academy-co
   .benefit::before, .benefit > svg, .benefit p { transition: none; }
   .benefit:hover::before, .benefit:hover > svg, .benefit:hover p { transform: none; }
 }
+

@@ -1,0 +1,31 @@
+{
+  "tool": "built-in image_gen",
+  "date": "2026-10-04",
+  "assets": [
+    {
+      "file": "noel-bonhomme.jpg",
+      "original": "WhatsApp Image 2026-09-09 at 11.51.49.jpeg",
+      "prompt": "Use case: precise-object-edit. Edit the supplied photograph for a cake design academy website. Faithful professional photographic restoration: improve fine detail, focus and natural sharpness, remove JPEG artifacts and noise, gently refine exposure and white balance without changing the lighting mood or colors. Preserve exactly this cake's shape, tiers, decorations, objects, composition and background. Remove any overlaid circular DYC Culinary Arts Academy logo from the upper left, reconstructing the background seamlessly; do not replace with any other logo or watermark. Preserve actual edible decorations and text on the cake.  Return ONE high-quality portrait photo with the same 4:5 aspect ratio, not a collage. No redesign or new objects."
+    },
+    {
+      "file": "noel-cadeaux.jpg",
+      "original": "WhatsApp Image 2026-10-04 at 12.36.37.jpeg",
+      "prompt": "Use case: precise-object-edit. Edit the supplied photograph for a cake design academy website. Faithful professional photographic restoration: improve fine detail, focus and natural sharpness, remove JPEG artifacts and noise, gently refine exposure and white balance without changing the lighting mood or colors. Preserve exactly this cake's shape, tiers, decorations, objects, composition and background. Remove any overlaid circular DYC Culinary Arts Academy logo from the upper left, reconstructing the background seamlessly; do not replace with any other logo or watermark. Preserve actual edible decorations and text on the cake.  Return ONE high-quality portrait photo with the same 4:5 aspect ratio, not a collage. No redesign or new objects."
+    },
+    {
+      "file": "anniversaire-dentiste.jpg",
+      "original": "WhatsApp Image 2026-10-04 at 12.37.54.jpeg",
+      "prompt": "Use case: precise-object-edit. Edit the supplied photograph for a cake design academy website. Faithful professional photographic restoration: improve fine detail, focus and natural sharpness, remove JPEG artifacts and noise, gently refine exposure and white balance without changing the lighting mood or colors. Preserve exactly this cake's shape, tiers, decorations, objects, composition and background. Remove any overlaid circular DYC Culinary Arts Academy logo from the upper left, reconstructing the background seamlessly; do not replace with any other logo or watermark. Preserve actual edible decorations and text on the cake.  Return ONE high-quality portrait photo with the same 4:5 aspect ratio, not a collage. No redesign or new objects."
+    },
+    {
+      "file": "piece-montee-fleurs.jpg",
+      "original": "WhatsApp Image 2026-10-04 at 12.37.11.jpeg",
+      "prompt": "Use case: precise-object-edit. Edit the supplied photograph for a cake design academy website. Faithful professional photographic restoration: improve fine detail, focus and natural sharpness, remove JPEG artifacts and noise, gently refine exposure and white balance without changing the lighting mood or colors. Preserve exactly this cake's shape, tiers, decorations, objects, composition and background. Remove any overlaid circular DYC Culinary Arts Academy logo from the upper left, reconstructing the background seamlessly; do not replace with any other logo or watermark. Preserve actual edible decorations and text on the cake. Remove the bottom promotional caption banner as well, seamlessly restoring the tablecloth underneath; preserve the blue bird cake topper and sugar flowers. Return ONE high-quality portrait photo with the same 4:5 aspect ratio, not a collage. No redesign or new objects."
+    },
+    {
+      "file": "drape-bleu.jpg",
+      "original": "WhatsApp Image 2026-10-04 at 12.38.12.jpeg",
+      "prompt": "Use case: precise-object-edit. Edit the supplied photograph for a cake design academy website. Faithful professional photographic restoration: improve fine detail, focus and natural sharpness, remove JPEG artifacts and noise, gently refine exposure and white balance without changing the lighting mood or colors. Preserve exactly this cake's shape, tiers, decorations, objects, composition and background. Remove any overlaid circular DYC Culinary Arts Academy logo from the upper left, reconstructing the background seamlessly; do not replace with any other logo or watermark. Preserve actual edible decorations and text on the cake.  Return ONE high-quality portrait photo with the same 4:5 aspect ratio, not a collage. No redesign or new objects."
+    }
+  ]
+}

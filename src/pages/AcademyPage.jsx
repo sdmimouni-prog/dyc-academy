@@ -30,7 +30,7 @@ export function AcademyPage({ onOpen }) {
         <img src={A + 'histoire-enseigne.png'} alt="L’enseigne DYC Culinary Arts Academy dans l’académie" width="213" height="173" />
         <img src={A + 'histoire-chocolat-fouet.png'} alt="Un chef travaille le chocolat au fouet" width="234" height="173" />
         <img src={A + 'histoire-macarons.png'} alt="Macarons et créations au chocolat" width="213" height="132" loading="lazy" />
-        <img src={A + 'histoire-salle.png'} alt="La salle lumineuse des ateliers de l’académie" width="234" height="132" loading="lazy" />
+        <img className="academy-story-room" src={A + 'histoire-salle-dyc.jpg'} alt="La salle des ateliers DYC avec ses plans de travail et son enseigne murale" width="234" height="132" loading="lazy" />
       </div>
       <div className="academy-story-copy">
         <p className="eyebrow">NOTRE HISTOIRE</p>
@@ -64,14 +64,14 @@ export function AcademyPage({ onOpen }) {
     </section>
 
     <section className="academy-space" id="notre-espace" aria-labelledby="academy-space-title">
+      <div className="academy-space-visual">
+        <img src={A + 'espace-academie-ilot.jpg'} alt="L’espace de création DYC avec son îlot équipé et son enseigne murale" width="568" height="224" loading="lazy" />
+      </div>
       <div className="academy-space-copy">
         <p className="eyebrow">UN CADRE D’EXCEPTION</p>
         <h2 id="academy-space-title">Un espace pensé<br /> pour la créativité</h2>
         <p>Notre académie vous accueille dans un espace moderne et chaleureux, équipé de matériel professionnel, pour apprendre dans les meilleures conditions et vivre une expérience immersive.</p>
         <button className="pill home-cta" onClick={() => onOpen('visite')}>Visiter l’académie <Arrow /></button>
-      </div>
-      <div className="academy-space-visual">
-        <img src={A + 'espace-academie.png'} alt="L’académie DYC : îlots en marbre, matériel professionnel et espaces de création" width="568" height="224" loading="lazy" />
       </div>
     </section>
   </div>;

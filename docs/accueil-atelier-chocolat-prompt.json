@@ -1,0 +1,6 @@
+{
+  "tool": "image_gen built-in",
+  "mode": "edit",
+  "input": "public/assets/entreprises/cafe-accueil-dyc.jpg",
+  "output": "public/assets/entreprises/atelier-chocolat-accueil-dyc.jpg"
+}

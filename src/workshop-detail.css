@@ -6,16 +6,39 @@
 .detail-hero::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #090807da 0%, #0b0909b8 30%, #100c0c27 52%, #08070742 100%), linear-gradient(0deg, #0b090978, transparent 30%); }
 .detail-hero-image { position: absolute; z-index: -2; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 56% 52%; }
 .detail-hero-content { position: absolute; top: 24.1%; left: 7.15%; width: 55%; }
-.detail-breadcrumb { position: static; display: flex; align-items: center; flex-wrap: wrap; gap: .7em; width: auto; margin: 0 0 clamp(22px, 2.25vw, 35px); padding: 0; border-radius: 0; background: transparent; box-shadow: none; color: #fff; font-family: var(--dyc-body-font); font-size: clamp(11px, .96vw, 15px); line-height: 1.3; text-shadow: 0 1px 4px #0009; white-space: normal; }
-.detail-breadcrumb a { padding: 0; transition: color .2s ease; }
-.detail-breadcrumb a:hover { color: #e7d3b2; }
-.detail-breadcrumb > span[aria-hidden] { opacity: .75; }
+@media (min-width: 701px) {
+  .workshop-detail--layer-cake .detail-hero { min-height: 570px; }
+  .workshop-detail--layer-cake .detail-hero-content { top: clamp(180px, 13vw, 210px); }
+}
 .detail-hero-content > .eyebrow { margin-bottom: clamp(10px, 1vw, 16px); color: #fffaf3; font-size: clamp(12px, 1.3vw, 19px); }
 .detail-hero h1 { max-width: 13ch; font-size: clamp(48px, 4.7vw, 77px); line-height: .97; letter-spacing: -.035em; white-space: nowrap; }
 .detail-hero-description { width: min(78%, 540px); margin-top: clamp(18px, 2vw, 32px); font-family: Montserrat, var(--dyc-body-font); font-size: clamp(13px, 1.18vw, 18px); line-height: 1.55; }
 .detail-hero-facts { display: flex; align-items: center; gap: clamp(15px, 1.8vw, 31px); width: max-content; max-width: 100%; margin: clamp(25px, 2.7vw, 46px) 0 0; padding: 0; list-style: none; }
 .detail-hero-facts li { display: flex; align-items: center; gap: clamp(7px, .8vw, 12px); max-width: 180px; font-size: clamp(11px, 1vw, 16px); line-height: 1.25; }
 .detail-hero-facts svg { width: clamp(23px, 2.5vw, 34px); height: clamp(23px, 2.5vw, 34px); flex: 0 0 auto; }
+
+.workshop-detail--cake-design .detail-hero-facts li { position: relative; isolation: isolate; }
+.workshop-detail--cake-design .detail-hero-facts li::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -10px -8px;
+  border-radius: 12px;
+  background: rgba(233, 216, 189, .08);
+  opacity: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  .workshop-detail--cake-design .detail-hero-facts li:hover { color: #efdab8; }
+  .workshop-detail--cake-design .detail-hero-facts li:hover::before { opacity: 1; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .workshop-detail--cake-design .detail-hero-facts li { transition: transform .4s cubic-bezier(.22, 1, .36, 1), color .3s ease; }
+  .workshop-detail--cake-design .detail-hero-facts li::before { transition: opacity .35s ease; }
+  .workshop-detail--cake-design .detail-hero-facts li > svg { transition: transform .5s cubic-bezier(.22, 1, .36, 1); }
+  .workshop-detail--cake-design .detail-hero-facts li:hover { transform: translateY(-4px); }
+  .workshop-detail--cake-design .detail-hero-facts li:hover > svg { transform: rotate(-6deg) scale(1.1); }
+}
+
 .detail-booking { position: absolute; top: 25.4%; right: 5.1%; width: clamp(235px, 22.5vw, 360px); min-height: 57%; padding: clamp(20px, 2.25vw, 36px); border-radius: 6px; background: #fbf9f5f4; box-shadow: 0 12px 50px #0004; color: #181715; }
 .detail-booking-price { white-space: nowrap; }
 .detail-booking-price strong { font-size: clamp(23px, 2.35vw, 37px); }
@@ -35,8 +58,7 @@
 .detail-introduction .pill { min-height: clamp(40px, 3.5vw, 56px); margin-top: clamp(14px, 1.65vw, 27px); }
 .detail-introduction-photo { min-height: 36.8vw; overflow: hidden; }
 .detail-introduction-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.workshop-detail--layer-cake .detail-introduction-photo { background: url('/assets/layer-cake-maquette.png') -51.05vw -39.43vw / 100vw auto no-repeat; }
-.workshop-detail--layer-cake .detail-introduction-photo img { visibility: hidden; }
+
 
 .detail-program { min-height: 31.7vw; padding: clamp(27px, 2.75vw, 44px) 6.8% clamp(34px, 3.7vw, 60px); text-align: center; background: #fbf9f5; }
 .detail-program h2 { margin: clamp(8px, .8vw, 13px) auto 0; font-size: clamp(29px, 3.05vw, 49px); line-height: 1.05; }
@@ -54,15 +76,35 @@
 .detail-included-photo { position: relative; min-height: 24vw; overflow: hidden; }
 .detail-included-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, #0807066c, transparent 64%); }
 .detail-included-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
-.workshop-detail--layer-cake .detail-included-photo { background: url('/assets/layer-cake-maquette.png') 0 -108.03vw / 100vw auto no-repeat; }
-.workshop-detail--layer-cake .detail-included-photo img,
-.workshop-detail--layer-cake .detail-included-photo > span { visibility: hidden; }
+
 .detail-included-photo > span { position: absolute; z-index: 1; bottom: 17%; left: 8%; color: #fff; font-family: 'DYC Signature', cursive; font-size: clamp(23px, 3.5vw, 58px); line-height: .8; white-space: pre-line; transform: rotate(-10deg); text-shadow: 0 2px 8px #0009; }
 .detail-included-copy { align-self: center; padding: 4% 6% 4% 5%; }
 .detail-included h2 { margin: clamp(10px, 1.2vw, 19px) 0 clamp(25px, 3vw, 48px); font-size: clamp(32px, 3.3vw, 54px); line-height: 1; }
 .detail-included-copy ul { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 7px; margin: 0; padding: 0; list-style: none; text-align: center; }
 .detail-included-copy li { display: flex; min-width: 0; align-items: center; flex-direction: column; gap: clamp(9px, 1.1vw, 18px); font-size: clamp(10px, .94vw, 15px); line-height: 1.32; }
 .detail-included-copy li svg { width: clamp(27px, 2.8vw, 44px); height: clamp(27px, 2.8vw, 44px); color: #5b432c; }
+
+.workshop-detail--cake-design .detail-included-copy li { position: relative; isolation: isolate; }
+.workshop-detail--cake-design .detail-included-copy li::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -12px -3px;
+  border-radius: 14px;
+  background: rgba(255, 252, 245, .72);
+  box-shadow: 0 10px 24px rgba(91, 67, 44, .1);
+  opacity: 0;
+}
+@media (hover: hover) and (pointer: fine) {
+  .workshop-detail--cake-design .detail-included-copy li:hover::before { opacity: 1; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .workshop-detail--cake-design .detail-included-copy li { transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
+  .workshop-detail--cake-design .detail-included-copy li::before { transition: opacity .35s ease; }
+  .workshop-detail--cake-design .detail-included-copy li svg { transition: transform .55s cubic-bezier(.22, 1, .36, 1); }
+  .workshop-detail--cake-design .detail-included-copy li:hover { transform: translateY(-5px); }
+  .workshop-detail--cake-design .detail-included-copy li:hover svg { transform: translateY(-3px) rotate(-5deg) scale(1.08); }
+}
 
 .detail-takeaways { display: grid; grid-template-columns: 42% 26% 32%; align-items: stretch; min-height: 39vw; padding: clamp(20px, 2.25vw, 36px) 0 clamp(16px, 1.65vw, 26px) 5.1%; background: #fbf9f5; }
 .detail-takeaways-image { display: flex; min-width: 0; flex-direction: column; padding-right: 5%; }
@@ -71,6 +113,22 @@
 .detail-takeaways-list { display: grid; align-content: center; gap: clamp(12px, 1.4vw, 22px); min-width: 0; margin: 0; padding: 6% 12% 0 4%; list-style: none; }
 .detail-takeaways-list li { display: flex; gap: clamp(8px, .9vw, 14px); align-items: flex-start; font-family: Montserrat, var(--dyc-body-font); font-size: clamp(11px, 1.02vw, 16px); line-height: 1.4; }
 .detail-check { display: grid; width: clamp(22px, 2.3vw, 36px); height: clamp(22px, 2.3vw, 36px); flex: 0 0 auto; place-items: center; border-radius: 50%; background: #e9d8bd; }
+
+@media (hover: hover) and (pointer: fine) {
+  .workshop-detail--cake-design .detail-takeaways-list li:hover .detail-check {
+    background: #5b432c;
+    color: #fffaf3;
+    box-shadow: 0 4px 12px rgba(91, 67, 44, .18);
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .workshop-detail--cake-design .detail-takeaways-list li > span:last-child { transition: transform .4s cubic-bezier(.22, 1, .36, 1); }
+  .workshop-detail--cake-design .detail-takeaways-list .detail-check { transition: transform .45s cubic-bezier(.22, 1, .36, 1), background-color .3s ease, color .3s ease, box-shadow .3s ease; }
+  .workshop-detail--cake-design .detail-takeaways-list .detail-check svg { transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
+  .workshop-detail--cake-design .detail-takeaways-list li:hover > span:last-child { transform: translateX(5px); }
+  .workshop-detail--cake-design .detail-takeaways-list li:hover .detail-check { transform: scale(1.08); }
+  .workshop-detail--cake-design .detail-takeaways-list li:hover .detail-check svg { transform: rotate(-7deg) scale(1.1); }
+}
 .detail-quote { display: flex; align-items: center; flex-direction: column; justify-content: center; min-width: 0; margin: 0; padding: 12% 11%; background: #ebe2d5 url('/assets/academie/philosophie-decoration.png') right center / auto 100% no-repeat; text-align: center; }
 .detail-quote-mark { align-self: flex-start; margin-left: 10%; font-family: var(--dyc-display-font); font-size: clamp(48px, 5.4vw, 87px); line-height: .6; }
 .detail-quote p { max-width: 21ch; margin-top: clamp(14px, 1.7vw, 27px); font-family: var(--dyc-display-font); font-size: clamp(20px, 2.1vw, 34px); font-style: italic; line-height: 1.12; }
@@ -84,9 +142,23 @@
 .detail-audience-grid h3 { font-family: var(--dyc-body-font); font-size: clamp(13px, 1.13vw, 18px); line-height: 1.2; }
 .detail-audience-grid p { margin-top: 5px; font-size: clamp(11px, .95vw, 15px); line-height: 1.35; }
 
+@media (hover: hover) and (pointer: fine) {
+  .workshop-detail--cake-design .detail-audience-grid article:hover {
+    background: #ece2d3;
+    box-shadow: 0 12px 28px rgba(84, 61, 43, .12), inset 0 0 0 1px rgba(84, 61, 43, .12);
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .workshop-detail--cake-design .detail-audience-grid article {
+    transition: transform .45s cubic-bezier(.22, 1, .36, 1), background-color .35s ease, box-shadow .35s ease;
+  }
+  .workshop-detail--cake-design .detail-audience-grid article > svg { transition: transform .55s cubic-bezier(.22, 1, .36, 1); }
+  .workshop-detail--cake-design .detail-audience-grid article:hover { transform: translateY(-6px); }
+  .workshop-detail--cake-design .detail-audience-grid article:hover > svg { transform: rotate(-5deg) scale(1.1); }
+}
+
 .detail-closing { display: flex; align-items: center; justify-content: space-between; gap: 24px; min-height: 14.2vw; padding: 2% 7% 2% 44.5%; background: #181612; color: #fffaf3; position: relative; isolation: isolate; }
 .detail-closing::before { content: ''; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #120f0e1c, #14110ec7 45%, #15120f 78%), var(--detail-closing-image) left 57% / 54% auto no-repeat; }
-.workshop-detail--layer-cake .detail-closing::after { content: ''; position: absolute; z-index: -1; top: 0; bottom: 0; left: 0; width: 43%; background: url('/assets/layer-cake-maquette.png') 0 -194.81vw / 100vw auto no-repeat; }
 .detail-closing .eyebrow { color: #fffaf3; }
 .detail-closing h2 { max-width: 15ch; margin-top: clamp(8px, 1vw, 16px); font-size: clamp(33px, 3.5vw, 56px); line-height: .99; }
 .detail-closing .pill { min-height: clamp(41px, 4.2vw, 67px); flex: 0 0 auto; }
@@ -105,19 +177,31 @@
 .detail-day-content .detail-check { width: clamp(19px, 1.85vw, 30px); height: clamp(19px, 1.85vw, 30px); }
 
 .workshop-detail--cake-design .detail-hero { height: 41.3vw; }
+.workshop-detail--cake-design .detail-hero-image {
+  left: auto;
+  right: 0;
+  width: 50%;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .12) 6%, rgba(0, 0, 0, .45) 15%, rgba(0, 0, 0, .8) 25%, #000 38%);
+  mask-image: linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, .12) 6%, rgba(0, 0, 0, .45) 15%, rgba(0, 0, 0, .8) 25%, #000 38%);
+}
+.workshop-detail--cake-design :is(.detail-introduction-photo, .detail-included-photo) { position: relative; background: #f5f3ef; }
+.workshop-detail--cake-design .detail-introduction-photo img { position: absolute; inset: 0; }
+.workshop-detail--cake-design :is(.detail-introduction-photo img, .detail-day-card > img, .detail-included-photo img, .detail-takeaways-image img) { object-fit: cover; }
 .workshop-detail--cake-design .detail-hero-content { top: 26%; }
 .workshop-detail--cake-design .detail-hero-description { max-width: 520px; }
-.workshop-detail--cake-design .detail-introduction { min-height: 35.8vw; grid-template-columns: 50.3% 49.7%; }
+.workshop-detail--cake-design .detail-introduction { min-height: 0; grid-template-columns: 65% 35%; align-items: center; }
 .workshop-detail--cake-design .detail-introduction-copy { padding-left: 12.6%; }
 .workshop-detail--cake-design .detail-introduction h2 { max-width: none; }
 .workshop-detail--cake-design .detail-introduction-copy > p:not(.eyebrow) { margin-top: clamp(9px, .88vw, 14px); }
-.workshop-detail--cake-design .detail-introduction-photo { min-height: 35.8vw; }
+.workshop-detail--cake-design .detail-introduction-photo { width: 100%; min-height: 0; aspect-ratio: 1122 / 1402; }
 .workshop-detail--cake-design .detail-included { min-height: 22.6vw; grid-template-columns: 40.6% 59.4%; }
-.workshop-detail--cake-design .detail-included-photo { min-height: 22.6vw; }
+.workshop-detail--cake-design .detail-included-photo { min-height: 28vw; }
 .workshop-detail--cake-design .detail-included-copy { padding-left: 4%; padding-right: 4%; }
 .detail-included-copy ul.detail-included-seven { grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 5px; }
 .workshop-detail--cake-design .detail-included-copy li { font-size: clamp(9px, .84vw, 14px); }
-.workshop-detail--cake-design .detail-takeaways { min-height: 36.4vw; }
+.workshop-detail--cake-design .detail-takeaways { min-height: 0; grid-template-columns: 30% 38% 32%; }
+.workshop-detail--cake-design .detail-takeaways-image img { max-width: 360px; height: auto; flex: none; aspect-ratio: 1122 / 1402; }
 .workshop-detail--cake-design .detail-takeaways-list { gap: clamp(7px, .75vw, 12px); padding-top: 1%; }
 .workshop-detail--cake-design .detail-takeaways-list li { font-size: clamp(11px, .93vw, 15px); }
 .workshop-detail--cake-design .detail-closing { min-height: 15.2vw; padding-left: 41.2%; }
@@ -127,7 +211,7 @@
 
 .workshop-detail--chocolat-pralines-mendiants .detail-hero { height: 39.3vw; }
 .workshop-detail--chocolat-pralines-mendiants .detail-hero::before { background: linear-gradient(90deg, #0b0807e8 0%, #100a08cb 31%, #100a0842 55%, #0b080780 100%); }
-.workshop-detail--chocolat-pralines-mendiants .detail-hero-content { top: 24%; }
+.workshop-detail--chocolat-pralines-mendiants .detail-hero-content { top: clamp(160px, 13vw, 184px); }
 .workshop-detail--chocolat-pralines-mendiants .detail-hero h1 { line-height: .94; }
 .workshop-detail--chocolat-pralines-mendiants .detail-hero-description { width: min(75%, 530px); }
 .workshop-detail--chocolat-pralines-mendiants .detail-booking { top: 25%; }
@@ -139,6 +223,21 @@
 .workshop-detail--chocolat-pralines-mendiants .detail-steps ul { list-style: none; padding-left: 0; }
 .workshop-detail--chocolat-pralines-mendiants .detail-steps ul li { position: relative; padding-left: 1em; }
 .workshop-detail--chocolat-pralines-mendiants .detail-steps ul li::before { content: '›'; position: absolute; left: 0; color: #5b432c; }
+
+@media (hover: hover) and (pointer: fine) {
+  .workshop-detail--chocolat-pralines-mendiants .detail-steps > li:hover .detail-step-number {
+    background: #5b432c;
+    color: #fffaf3;
+    box-shadow: 0 8px 20px rgba(91, 67, 44, .2);
+  }
+  .workshop-detail--chocolat-pralines-mendiants .detail-steps > li:hover h3 { color: #5b432c; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .workshop-detail--chocolat-pralines-mendiants .detail-step-number { transition: translate .45s cubic-bezier(.22, 1, .36, 1), scale .45s cubic-bezier(.22, 1, .36, 1), background-color .3s ease, color .3s ease, box-shadow .3s ease; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-steps h3 { transition: translate .4s cubic-bezier(.22, 1, .36, 1), color .3s ease; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-steps > li:hover .detail-step-number { translate: 0 -4px; scale: 1.08; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-steps > li:hover h3 { translate: 0 -3px; }
+}
 
 .detail-creations { display: grid; grid-template-columns: 46% 54%; min-height: 28.4vw; background: #eee6dc; }
 .detail-creations-photo { position: relative; min-height: 28.4vw; overflow: hidden; }
@@ -152,6 +251,23 @@
 .detail-creation-icon { display: grid; width: clamp(54px, 5.7vw, 91px); height: clamp(54px, 5.7vw, 91px); margin-bottom: clamp(12px, 1.1vw, 18px); place-items: center; border: 1px solid #d8c8ae; border-radius: 50%; color: #5b432c; }
 .detail-creations-copy strong { font-size: clamp(13px, 1.08vw, 17px); }
 .detail-creations-copy small { max-width: 17ch; margin-top: 4px; font-size: clamp(10px, .86vw, 13px); line-height: 1.25; }
+
+@media (hover: hover) and (pointer: fine) {
+  .workshop-detail--chocolat-pralines-mendiants .detail-creations-copy li:hover .detail-creation-icon {
+    background: #f8f1e6;
+    border-color: #b3946d;
+    box-shadow: 0 8px 20px rgba(91, 67, 44, .14);
+  }
+  .workshop-detail--chocolat-pralines-mendiants .detail-creations-copy li:hover strong { color: #5b432c; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .workshop-detail--chocolat-pralines-mendiants .detail-creations-copy li { transition: transform .45s cubic-bezier(.22, 1, .36, 1); }
+  .workshop-detail--chocolat-pralines-mendiants .detail-creation-icon { transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-creation-icon svg { transition: transform .5s cubic-bezier(.22, 1, .36, 1); }
+  .workshop-detail--chocolat-pralines-mendiants .detail-creations-copy strong { transition: color .3s ease; }
+  .workshop-detail--chocolat-pralines-mendiants .detail-creations-copy li:hover { transform: translateY(-5px); }
+  .workshop-detail--chocolat-pralines-mendiants .detail-creations-copy li:hover .detail-creation-icon svg { transform: rotate(-6deg) scale(1.1); }
+}
 
 .detail-experiences { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2%; padding: 2.7% 4%; background: #fbf9f5; }
 .detail-experience-card { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-width: 0; min-height: 33.4vw; overflow: hidden; border-radius: 5px; color: #fffaf3; }
@@ -185,7 +301,6 @@
   .workshop-detail--layer-cake .detail-introduction-photo img,
   .workshop-detail--layer-cake .detail-included-photo img,
   .workshop-detail--layer-cake .detail-included-photo > span { visibility: visible; }
-  .workshop-detail--layer-cake .detail-closing::after { display: none; }
   .detail-hero { height: 570px; }
   .detail-hero-content { top: 150px; width: 60%; }
   .detail-booking { top: 165px; right: 5%; }
@@ -198,6 +313,7 @@
   .detail-included { min-height: 310px; }
   .detail-included-photo { min-height: 310px; }
   .detail-takeaways { grid-template-columns: 45% 55%; }
+  .workshop-detail--cake-design .detail-takeaways { grid-template-columns: 35% 65%; }
   .detail-quote { grid-column: 1 / -1; min-height: 230px; margin: 24px 5% 0 0; background-size: auto 155%; }
   .detail-audience-grid { grid-template-columns: repeat(2, 1fr); }
   .detail-day-card { grid-template-columns: 34% 66%; }
@@ -214,6 +330,7 @@
 
 @media (max-width: 700px) {
   .workshop-detail--cake-design .detail-hero { height: auto; min-height: 0; max-height: none; }
+  .workshop-detail--cake-design .detail-hero-image { width: 100%; height: 100%; -webkit-mask-image: none; mask-image: none; }
   .workshop-detail--cake-design .detail-hero-content { top: auto; }
   .workshop-detail--chocolat-pralines-mendiants .detail-hero { height: auto; min-height: 0; max-height: none; }
   .workshop-detail--chocolat-pralines-mendiants .detail-hero-content { top: auto; }
@@ -222,7 +339,6 @@
   .detail-hero::before { z-index: -1; background: linear-gradient(180deg, #0a080980 0%, #0a0809c9 35%, #0a0809af 70%, #0a0809 100%); }
   .workshop-detail--chocolat-pralines-mendiants .detail-hero::before { background: linear-gradient(180deg, #0a0809a8 0%, #0a0809d7 38%, #0a0809b5 72%, #0a0809 100%); }
   .detail-hero-content { position: relative; top: auto; left: auto; width: 100%; }
-  .detail-breadcrumb { margin-bottom: 28px; font-size: 11px; }
   .detail-hero h1 { max-width: none; font-size: clamp(38px, 9.5vw, 55px); white-space: normal; }
   .detail-hero-description { width: min(100%, 38ch); font-size: 14px; }
   .detail-hero-facts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: 18px 10px; margin-top: 28px; }
@@ -241,7 +357,7 @@
   .detail-introduction h2 { font-size: clamp(37px, 9vw, 52px); }
   .detail-introduction-copy > p:not(.eyebrow) { font-size: 14px; line-height: 1.58; }
   .detail-introduction-photo { height: 280px; min-height: 0; }
-  .workshop-detail--cake-design .detail-introduction-photo { min-height: 0; }
+  .workshop-detail--cake-design .detail-introduction-photo { height: auto; min-height: 0; }
   .workshop-detail--chocolat-pralines-mendiants .detail-introduction-photo { min-height: 0; }
   .workshop-detail--layer-cake .detail-introduction-photo,
   .workshop-detail--layer-cake .detail-included-photo { background: none; }
@@ -290,6 +406,7 @@
   .detail-takeaways h2 { font-size: 40px; }
   .detail-takeaways-image { padding: 0; }
   .detail-takeaways-image img { height: 330px; flex: none; }
+  .workshop-detail--cake-design .detail-takeaways-image img { max-width: 280px; align-self: center; }
   .detail-takeaways-list { padding: 32px 0; gap: 15px; }
   .detail-takeaways-list li { font-size: 14px; }
   .detail-quote { min-height: 300px; margin: 0 -6.8%; }
@@ -314,5 +431,123 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .detail-breadcrumb a, .detail-booking-button, .detail-experience-card > img { transition: none; }
+  .detail-booking-button, .detail-experience-card > img { transition: none; }
+}
+
+/* Compact, transparent booking controls keep the Cake Design photo visible. */
+.workshop-detail--cake-design .detail-booking {
+  top: auto;
+  bottom: 24px;
+  width: 260px;
+  min-height: 0;
+  padding: 12px;
+  background: transparent;
+  box-shadow: none;
+  color: #fffaf3;
+}
+.workshop-detail--cake-design .detail-booking-price { text-shadow: 0 1px 3px #000, 0 2px 10px #000; }
+.workshop-detail--cake-design .detail-booking-price strong { font-size: 26px; }
+.workshop-detail--cake-design .detail-booking-price span { font-size: 13px; }
+.workshop-detail--cake-design .detail-booking .detail-booking-button { min-height: 46px; margin-top: 10px; padding: 0 18px; font-size: 14px; }
+.workshop-detail--cake-design .detail-booking-facts { display: none; }
+@media (max-width: 760px) {
+  .workshop-detail--cake-design .detail-booking { bottom: auto; width: min(100%, 280px); margin-top: 24px; padding: 0; }
+}
+
+/* Dark studio Layer Cake photograph fills every existing frame. */
+img[src="/assets/layer-cake-hero-panorama.png"][src] { object-fit: cover; object-position: 65% center; background: #211912; }
+.workshop-detail--layer-cake .detail-hero-image { width: 100%; height: 100%; left: 0; object-fit: cover; object-position: center; }
+@media (max-width: 760px) {
+  .workshop-detail--layer-cake .detail-hero-image { object-position: 62% center; }
+}
+
+/* Photo-free programme: editorial day headings and clearly separated lessons. */
+.detail-program--days .detail-day-card { display: block; min-height: 0; padding: clamp(24px, 3vw, 44px); border-radius: 16px; border-top: 3px solid #a1845e; background: linear-gradient(145deg, #fffdf9, #f2ece2); box-shadow: 0 8px 24px #473a2510; }
+.detail-program--days .detail-day-content { padding: 0; }
+.detail-day-heading { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin-bottom: 12px; }
+.detail-program--days .detail-day-label { margin: 0; font-size: 12px; letter-spacing: .18em; color: #806746; font-weight: 700; }
+.detail-day-number { font-family: var(--dyc-display-font); font-size: 64px; line-height: 1; color: #c9b89d; }
+.detail-program--days .detail-day-content h3 { font-size: clamp(30px, 2.8vw, 42px); max-width: 22ch; min-height: 2.2em; margin-bottom: 24px; }
+.detail-program--days .detail-day-content ul { gap: 0; }
+.detail-program--days .detail-day-content li { padding: 14px 0; border-top: 1px solid #d9cebd; font-size: clamp(14px, 1.1vw, 17px); line-height: 1.5; gap: 14px; align-items: center; }
+.detail-program--days .detail-check { width: 28px; height: 28px; flex-shrink: 0; background: #e9dbc3; }
+@media (max-width: 900px) {
+ .detail-program--days .detail-day-content h3 { min-height: 0; }
+}
+@media (max-width: 700px) {
+ .detail-program--days .detail-day-card { padding: 24px; }
+ .detail-day-number { font-size: 52px; }
+ .detail-program--days .detail-day-content h3 { font-size: 30px; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .detail-program--reveal .detail-day-card { opacity: 0; transform: translateY(24px); }
+  .detail-program--reveal.detail-program--visible .detail-day-card { animation: detail-day-reveal .75s cubic-bezier(.22, 1, .36, 1) calc(var(--day-index) * .16s) backwards; opacity: 1; transform: none; }
+  .detail-program--days .detail-day-card { transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+  .detail-program--days .detail-day-number { transition: color .35s ease, transform .35s ease; }
+  @keyframes detail-day-reveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+}
+@media (hover: hover) and (pointer: fine) {
+  .detail-program--days .detail-day-card:hover { border-color: #a1845e; box-shadow: 0 16px 36px #80674624; }
+  .detail-program--days .detail-day-card:hover .detail-day-number { color: #96754b; }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .detail-program--days.detail-program--visible .detail-day-card:hover { transform: translateY(-6px); }
+  .detail-program--days .detail-day-card:hover .detail-day-number { transform: translateY(-3px); }
+}
+
+.detail-program-gallery { display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(16px, 2vw, 28px); max-width: 1500px; margin: 32px auto 0; }
+.detail-program-gallery figure { margin: 0; overflow: hidden; border-radius: 14px; border: 1px solid #ded2bf; box-shadow: 0 8px 24px #473a2514; aspect-ratio: 4 / 3; }
+.detail-program-gallery figure:nth-child(2) { margin-top: 28px; }
+.detail-program-gallery img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+ .detail-program-gallery img { transition: transform 1s ease; }
+ .detail-program-gallery figure:hover img { transform: scale(1.035); }
+}
+@media (max-width: 700px) {
+ .detail-program-gallery { grid-template-columns: 1fr; gap: 16px; margin-top: 24px; }
+ .detail-program-gallery figure:nth-child(2) { margin-top: 0; }
+}
+
+/* Programme in three parallel columns: two days and one academy photograph. */
+.detail-program--days .detail-day-grid { grid-template-columns: 1fr 1fr .95fr; align-items: stretch; }
+.detail-program--days .detail-day-card { padding: clamp(22px, 2vw, 32px); }
+.detail-program--days .detail-day-content h3 { font-size: clamp(27px, 2.15vw, 35px); min-height: 3.3em; }
+.detail-program-photo { margin: 0; min-height: 460px; overflow: hidden; border-radius: 16px; border: 1px solid #ded2bf; box-shadow: 0 8px 24px #473a2514; }
+.detail-program-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 32%; }
+@media (max-width: 1100px) {
+ .detail-program--days .detail-day-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .detail-program-photo { grid-column: 1 / -1; min-height: 0; aspect-ratio: 2 / 1; }
+}
+@media (max-width: 700px) {
+ .detail-program--days .detail-day-grid { grid-template-columns: 1fr; }
+ .detail-program--days .detail-day-content h3 { min-height: 0; }
+ .detail-program-photo { aspect-ratio: 4 / 3; }
+}
+
+/* Two programme cards and one room photograph on the same desktop row. */
+.detail-program--days .detail-day-grid { grid-template-columns: 1fr 1fr .95fr; align-items: stretch; }
+.detail-program--days .detail-day-card { padding: clamp(22px, 2vw, 32px); }
+.detail-program--days .detail-day-content h3 { font-size: clamp(27px, 2.15vw, 35px); min-height: 3.3em; }
+.detail-program-photo { margin: 0; min-height: 460px; overflow: hidden; border-radius: 16px; border: 1px solid #ded2bf; box-shadow: 0 8px 24px #473a2514; }
+.detail-program-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 1100px) {
+ .detail-program--days .detail-day-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+ .detail-program-photo { grid-column: 1 / -1; min-height: 0; aspect-ratio: 2 / 1; }
+}
+@media (max-width: 700px) {
+ .detail-program--days .detail-day-grid { grid-template-columns: 1fr; }
+ .detail-program--days .detail-day-content h3 { min-height: 0; }
+ .detail-program-photo { aspect-ratio: 4 / 3; }
+}
+
+.detail-program-photo-stack { display: grid; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 18px; min-width: 0; }
+.detail-program-photo-stack .detail-program-photo { min-height: 0; position: relative; aspect-ratio: auto; grid-column: auto; }
+.detail-program-photo-stack img { position: absolute; inset: 0; }
+@media (max-width: 1100px) {
+ .detail-program-photo-stack { grid-column: 1 / -1; grid-template-rows: auto auto; }
+ .detail-program-photo-stack .detail-program-photo { aspect-ratio: 2 / 1; }
+}
+@media (max-width: 700px) {
+ .detail-program-photo-stack .detail-program-photo { aspect-ratio: 4 / 3; }
 }

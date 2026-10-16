@@ -1,4 +1,5 @@
 import { Arrow } from "./Arrow";
+import { siteConfig } from "../data/siteConfig";
 
 export function Footer({ page, onOpen }) {
   const open = onOpen;
@@ -40,6 +41,7 @@ export function Footer({ page, onOpen }) {
       <div className="footer-column footer-contact">
         <h3>Créons un moment ensemble</h3>
         <p>Une envie, une question, un événement à imaginer ? Parlons-en.</p>
+        <p><strong>{siteConfig.contact.name}</strong><br />{siteConfig.contact.address}</p>
         <a className="pill home-cta footer-contact-link" href="/contact">Contacter l’académie <Arrow/></a>
       </div>
     </div>

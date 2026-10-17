@@ -2,6 +2,8 @@
 
 ## DYC user preferences
 
+- Video popup correction 2026-10-17: fit the media column tightly to the portrait video’s 9:16 ratio, without wide dark margins. Keep the full frame visible and the cream story panel beside it on desktop.
+
 - Video preference 2026-10-16: “Voir la vidéo” opens a large, responsive cinema-style dialog using the supplied “temoinage format web.mp4”. Preserve the full portrait frame, use native controls, start only on request, stop on close, and deliver adaptive HLS with optimized fast-start MP4 fallback. Never ship the 234 MB original or load video on the initial page view.
 
 - Recovered 2026-10-16 from the latest colleague Vercel deployment `dpl_83PbUDtpdY6M31xKdtbjBKuZtghM`. This deployment is the new local base. The user approved copying this recovered version into GitHub `main` and pushing it to trigger Vercel deployment on 2026-10-16. Preserve the colleague’s WhatsApp flow, content, photos and animations.

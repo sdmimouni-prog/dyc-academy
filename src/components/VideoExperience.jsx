@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Play } from '@phosphor-icons/react';
 import { Arrow } from './Arrow';
 
-const MEDIA = '/media/dyc-experience/';
+const MEDIA = '/media/dyc-experience-20261019/';
 
 export default function VideoExperience({ onReserve }) {
   const videoRef = useRef(null);
@@ -66,7 +66,7 @@ export default function VideoExperience({ onReserve }) {
         onCanPlay={() => setBuffering(false)} onPause={() => setBuffering(false)} />
       {!started && <button className="experience-play" onClick={() => setStarted(true)} aria-label="Lire les témoignages DYC">
         <span><Play size={30} weight="fill" aria-hidden="true" /></span>
-        Lire la vidéo <small>2 min 33</small>
+        Lire la vidéo <small>2 min 38</small>
       </button>}
       {buffering && !failed && <p className="experience-status" role="status">Chargement de la vidéo…</p>}
       {failed && <div className="experience-error" role="alert"><p>La vidéo n’a pas pu démarrer.</p>

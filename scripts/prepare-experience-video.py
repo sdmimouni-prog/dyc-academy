@@ -1,5 +1,5 @@
 """Create on-demand HLS renditions and a fast-start MP4 from the approved web source.
-Usage: python3 scripts/prepare-experience-video.py /path/to/web.mp4
+Usage: python3 scripts/prepare-experience-video.py /path/to/web.mp4 [public/media/output-folder]
 Requires ffmpeg and ffprobe. The original stays outside the repository.
 """
 import json
@@ -8,7 +8,7 @@ import subprocess
 import sys
 
 source = Path(sys.argv[1]).resolve(strict=True)
-root = Path(__file__).resolve().parent.parent / 'public/media/dyc-experience'
+root = Path(__file__).resolve().parent.parent / (sys.argv[2] if len(sys.argv) > 2 else 'public/media/dyc-experience')
 root.mkdir(parents=True, exist_ok=True)
 probe = json.loads(subprocess.check_output(['ffprobe', '-v', 'error', '-show_streams', '-show_format', '-of', 'json', str(source)]))
 video = next(s for s in probe['streams'] if s['codec_type'] == 'video')
